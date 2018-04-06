@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{45EDD58B-2FD6-4A69-8EF7-0B16452F406F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SchulerPrototype/Views/superadmin/Index.cshtml">
+    <Files>
+      <File FileName="SchulerPrototype/Views/superadmin/Index.cshtml" Line="41" Column="7" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.SchulerPrototype PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -465,6 +465,10 @@
     <Content Include="Views\Teacher\class_attendance.cshtml" />
     <Content Include="Views\Security\InOutLog.cshtml" />
     <Content Include="Views\Security\dashboard.cshtml" />
+    <Content Include="Content\images\administration.png" />
+    <Content Include="Content\images\asset.png" />
+    <Content Include="Content\images\canteen.png" />
+    <Content Include="Content\images\hr.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
