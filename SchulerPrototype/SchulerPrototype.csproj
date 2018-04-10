@@ -148,6 +148,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Controllers\SecurityController.cs" />
+    <Compile Include="Controllers\HrController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -469,10 +471,39 @@
     <Content Include="Content\images\asset.png" />
     <Content Include="Content\images\canteen.png" />
     <Content Include="Content\images\hr.png" />
+    <Content Include="Views\Hr\hrManagement.cshtml" />
+    <Content Include="Views\Hr\addEmployee.cshtml" />
+    <Content Include="Views\Hr\empList.cshtml" />
+    <Content Include="Views\Hr\hrPayroll.cshtml" />
+    <Content Include="Views\Hr\empLeave.cshtml" />
+    <Content Include="Views\Hr\hrAttendance.cshtml" />
+    <Content Include="Content\images\Hr\add.png" />
+    <Content Include="Content\images\Hr\employeelist.png" />
+    <Content Include="Content\images\Hr\leave.png" />
+    <Content Include="Content\images\Hr\list.png" />
+    <Content Include="Content\images\Hr\payroll.png" />
+    <Content Include="Scripts\js\Hr\addEmployee.js" />
+    <Content Include="Content\datepicker\bootstrap-datetimepicker.js" />
+    <Content Include="Content\datepicker\datepicker.css" />
+    <Content Include="Content\datepicker\default.css" />
+    <Content Include="Content\datepicker\default.date.css" />
+    <Content Include="Content\datepicker\legacy.js" />
+    <Content Include="Content\datepicker\material-datetime-picker.css" />
+    <Content Include="Content\datepicker\material-datetime-picker.js" />
+    <Content Include="Content\datepicker\picker.date.js" />
+    <Content Include="Content\datepicker\picker.js" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Admission.cshtml" />
+    <Content Include="Views\Admin\Enrollment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Hr\" />
+    <Folder Include="Content\images\Hr\" />
+    <Folder Include="Scripts\js\Hr\" />
+    <Folder Include="Content\datepicker\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

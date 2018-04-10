@@ -1,0 +1,1414 @@
+﻿@{
+    ViewBag.Title = "add_employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong class="black">Human Resource Management</strong></h2>
+         </div>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><a href="@Url.Action("hrManagement", "Hr")"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+            <li class="black">New Employee</li>
+         </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+               <h4>School Year 2016-2017</h4>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" >
+               <button type="button" class="btn btn-default pull-right" value='Print' onclick='printDiv();' ><i class="fa fa-print" aria-hidden="true"></i>Print Forms</button>
+            </div>
+         </div>
+         <div class='row'>
+            <form id='toogleValidationEmployee' method="POST" enctype="multipart/form-data">
+               <!--action="http://localhost:8000/admin/students_info"-->
+               <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" style="padding-right: 30px;">
+                  <div class="row">
+                     <ul class="nav nav-pills nav-stacked" id="myTabs">
+                        <li id="tab1" class="active window-vertical-style" ><a data-toggle="tab" href="#personalInfo"><font size="5" color="black">1. </font>Personal Information</a></li>
+                        <li id="tab2" class="window-vertical-style" ><a data-toggle="tab" href="#addressInfo"><font size="5" color="black">2. </font>Address Information</a></li>
+                        <li id="tab3" class="window-vertical-style" ><a data-toggle="tab" href="#familyInfo"><font size="5" color="black">3. </font>Family Information</a></li>
+                        <li id="tab4" class="window-vertical-style" ><a data-toggle="tab" href="#educationalInfo"><font size="5" color="black">4. </font>Education Information</a></li>
+                        <li id="tab5" class="window-vertical-style" ><a data-toggle="tab" href="#schoolInfo"><font size="5" color="black">5. </font>Work Experience</a></li>
+                        <li id="tab6" class="window-vertical-style" ><a data-toggle="tab" href="#references"><font size="5" color="black">6. </font>References</a></li>
+                        <li id="tab7" class="window-vertical-style" ><a data-toggle="tab" href="#requirements"><font size="5" color="black">7. </font>Employee Requirements</a></li>
+                  </div>
+               </div>
+               <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                  <div class="tab-content">
+                     <div class="tab-pane active" id="personalInfo">
+                        <div class="panel panel-custom">
+                           <div class="panel-heading"><i class="fa fa-address-book-o"></i>&nbsp Personal Information</div>
+                           <div class="panel-body">
+                              <div class='row' >
+                                 <div class='col-xs-12 col-lg-12 m-t-20' >
+                                    <div class="col-xs-12 col-lg-4 no-padding">
+                                       <div class='form-group col-xs-12 col-lg-12 clearfix'>
+                                          <div class="form-group">
+                                             <figure>
+                                                <img id="blah2" src="../../content/images/teacher1.png" height="160">
+                                                <figcaption>
+                                                   <span class="btn btn-file">
+                                                   <input class="required input-sm" type="file" id="imgInp2" name="file" style="width: 100px;">
+                                                   </span>
+                                                </figcaption>
+                                             </figure>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-8 no-padding" style="padding-top: 20px;">
+                                       <div class='form-group col-xs-12 col-lg-12 clearfix'>
+                                          <label class='control-label' for='EmployeeNo'>Employee No. *</label>
+                                          <input class='required form-control' id="employeeNo" name="employeeNo" type='text' >
+                                       </div>
+                                       <div class='form-group col-xs-12 col-lg-6 clearfix'>
+                                          <label class='control-label' for='staffDepartment'>Department *</label>
+                                          <select class="col-md-12 col-lg-12 form-control" data-style='btn-white' id="staffDepartment" name="staffDepartment">
+                                             <option value="" hidden>--Select Department--</option>
+                                             <option value="Administration">Administration</option>
+                                             <option value="Clinic">Clinic</option>
+                                             <option value="Counselor">Counselor</option>
+                                             <option value="Finance">Finance</option>
+                                             <option value="Human Resources">Human Resources</option>
+                                             <option value="Security">Security</option>
+                                             <option value="Library">Library</option>
+                                             <option value="Transportation">Transportation</option>
+                                             <option value="Maintenance">Maintenance</option>
+                                             <option value="Teacher">Teacher</option>
+                                             <option value="Other Staffs">Other Staffs</option>
+                                          </select>
+                                       </div>
+                                       <div class='form-group col-lg-6 clearfix'>
+                                          <label class='control-label' for='staffRole'>Role *</label>
+                                          <select class="col-md-12 col-lg-12 form-control" data-style='btn-white' id="staffRole" name="staffRole">
+                                             <option value="" hidden>--Select Role--</option>
+                                             <option value="Administration">Principal</option>
+                                             <option value="Administration">Secretary</option>
+                                             <option value="Administration">Registrar</option>
+                                             <option value="Clinic">Nurse</option>
+                                             <option value="Clinic">Medical/Dental</option>
+                                             <option value="Counselor">Guidance Counselor</option>
+                                             <option value="Counselor">Guidance Coordinator</option>
+                                             <option value="Counselor">Guidance Assistant</option>
+                                             <option value="Counselor">Order and Discipline</option>
+                                             <option value="Finance">Director of Finance</option>
+                                             <option value="Finance">Cashier</option>
+                                             <option value="Finance">Accountant</option>
+                                             <option value="Finance">Bookkeeper</option>
+                                             <option value="Human Resources">HR Manager</option>
+                                             <option value="Human Resources">Assistant HR</option>
+                                             <option value="Security">Security Guard</option>
+                                             <option value="Library">Librarian</option>
+                                             <option value="Library">Assistant Librarian</option>
+                                             <option value="Transportation">Driver</option>
+                                             <option value="Transportation">Conductor</option>
+                                             <option value="Transportation">Mechanic</option>
+                                             <option value="Maintenance">Auditor</option>
+                                             <option value="Maintenance">Electrician</option>
+                                             <option value="Teacher">Master Teacher</option>
+                                             <option value="Teacher">Teacher I</option>
+                                             <option value="Teacher">Teacher II</option>
+                                             <option value="Teacher">Teacher III</option>
+                                             <option value="Other Staffs">Janitor</option>
+                                             <option value="Other Staffs">Helper</option>
+                                             <option value="Other Staffs">Gardener</option>
+                                          </select>
+                                          <input class='role' name="role" id="role" type='hidden'>
+                                       </div>
+                                       <div class='form-group col-lg-6 clearfix'>
+                                          <label class='control-label' for='license'>License *</label>
+                                          <input class='required form-control license' name="license" id="license" type='text' readonly>
+                                       </div>
+                                       <div id="staffMajordiv" class='form-group col-lg-6 clearfix'>
+                                          <label class='control-label' for='staffMajor'>Major *</label>
+                                          <input class="form-control col-lg-12" id="staffMajor" name="staffMajor">
+                                       </div>
+                                       <div class='form-group col-lg-6 clearfix'>
+                                          <label class='control-label' for='license'>Date Hired *</label>
+                                          <div class="input-group date form_date2 col-lg-12" data-date-format="MM dd, yyyy" data-link-field="dateHired">
+                                             <input  class="form-control" size="16" type="text" value="" id="dateHired2" name="" readonly>
+                                             <span class="input-group-addon">
+                                                <div class="glyphicon glyphicon-remove"></div>
+                                             </span>
+                                             <span class="input-group-addon">
+                                                <div class="glyphicon glyphicon-calendar"></div>
+                                             </span>
+                                          </div>
+                                          <input type="text" id="dateHired" name="dateHired" class="cj" value="" style=" position: absolute; visibility: hidden;" />
+                                       </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-12 col-lg-9">
+                                       <div class='form-group col-xs-12 col-md-6 col-lg-6 clearfix'>
+                                          <label class='control-label' for='empPayRate'>Pay Rate *</label>
+                                          <div class='input-group'>
+                                             <span class="input-group-addon">₱</span>
+                                             <input class='form-control' name="empPayRate" id="empPayRate" min="0" max="1000000000" type='text' value="15000">
+                                          </div>
+                                       </div>
+                                       <div class='form-group col-xs-12 col-md-6 clearfix'>
+                                          <label class="col-lg-12 control-label" style="text-align: center;">Working days *</label>
+                                          <div class="col-lg-12 form-group">
+                                             <div class="col-xs-6 col-lg-6">
+                                                <input class="form-check" type="radio" name="days" id="fivedays" value="5" checked> <label for="fivedays">5 days</label>
+                                             </div>
+                                             <div class="col-xs-6 col-lg-6">
+                                                <input class="form-check" type="radio" name="days" id="sixdays" value="6"> <label for="sixdays">6 days</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--  end of the row -->
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-12 col-md-12 col-lg-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='empLastName'>Last Name *</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control' name="empLastName" id="empLastName" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-12 col-md-4 col-lg-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='empFirstName'>First Name *</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control' name="empFirstName" id="empFirstName" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-12 col-md-4 col-lg-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='empMiddleName'>Middle Name *</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control' name="empMiddleName" id="empMiddleName" type='text'>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-12 col-md-4 col-lg-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='religion'>Religion *</label>
+                                       <div class='col-xs-12'>
+                                          <input type="text" list="dataReligion" class="required form-control" data-style='btn-white' id="religion" name="religion" autocomplete="off">
+                                       </div>
+                                    </div>
+                                    <datalist id="dataReligion">
+                                       <option value="Christian">
+                                       <option value="Buddhism"> 
+                                       <option value="Islam">
+                                       <option value="Judaism">
+                                       <option value="Atheism">
+                                       <option value="Shinto">
+                                       <option value="Taoism">
+                                       <option value="Candomble">
+                                       <option value="Santeria">
+                                       <option value="Pafanism">
+                                       <option value="Jainism">
+                                       <option value="Bahai">
+                                       <option value="Zoroastrianism">
+                                       <option value="Rastafari">
+                                       <option value="Unitarianism">
+                                       <option value="Animism">
+                                       <option value="Amish">
+                                       <option value="Asatru">
+                                       <option value="Aladura">
+                                       <option value="Greek Myth">
+                                       <option value="Mormonism">
+                                       <option value="Hinduism">
+                                       <option value="Jehovahs Witnesses">
+                                    </datalist>
+                                    <div class='form-group col-xs-12 col-md-4 col-lg-4 clearfix'>
+                                    <label class='col-xs-12 control-label' for='studentNationality'>Nationality *</label>
+                                    <div class='col-xs-12'>
+                                    <input type="text" list="dataNationality" class="form-control" id="empNationality" name="empNationality" data-style='btn-white' autocomplete="off">
+                                    </div>
+                                    </div>
+                                    <datalist id="dataNationality">
+                                    <option>Filipino</option>
+                                    <option>American</option>
+                                    <option>Afghan</option>
+                                    <option>Albanian</option>
+                                    <option>Algerian</option>
+                                    <option>Andorran</option>
+                                    <option>Angolan</option>
+                                    <option>Argentinian</option>
+                                    <option>Armenian</option>
+                                    <option>Australian</option>
+                                    <option>Azerbaijani</option>
+                                    <option>Bahamian</option>
+                                    <option>Bangladeshi</option>
+                                    <option>Barbadian</option>
+                                    <option>Balorussian</option>
+                                    <option>Belgian</option>
+                                    <option>Beninese</option>
+                                    <option>Bhutanese</option>
+                                    <option>Bolivian</option>
+                                    <option>Bosnian</option>
+                                    <option>Brazilian</option>
+                                    <option>British</option>
+                                    <option>Briton</option>
+                                    <option>Bruneian</option>
+                                    <option>Bulgarian</option>
+                                    <option>Burmese</option>
+                                    <option>Burundian</option>
+                                    <option>Cambodian</option>
+                                    <option>Cameroonian</option>
+                                    <option>Canadian</option>
+                                    <option>Chandian</option>
+                                    <option>Chinese</option>
+                                    <option>Colombia</option>
+                                    <option>Congolese</option>
+                                    <option>Crotian</option>
+                                    <option>Cuban</option>
+                                    <option>Cypriot</option>
+                                    <option>Czech</option>
+                                    <option>Dane</option>
+                                    <option>Dominican</option>
+                                    <option>Ecuadorean</option>
+                                    <option>Egyptian</option>
+                                    <option>Englishman</option>
+                                    <option>Eritrean</option>
+                                    <option>Estonian</option>
+                                    <option>Fijan</option>
+                                    <option>Finn</option>
+                                    <option>Frenchman</option>
+                                    <option>Gabonese</option>
+                                    <option>Gambian</option>
+                                    <option>Georgian</option>
+                                    <option>German</option>
+                                    <option>Ghanaian</option>
+                                    <option>Greek</option>
+                                    <option>Grenadian</option>
+                                    <option>Guatemalan</option>
+                                    <option>Guinean</option>
+                                    <option>Guyanese</option>
+                                    <option>Haitian</option>
+                                    <option>Dutchman</option>
+                                    <option>Honduran</option>
+                                    <option>Hungarian</option>
+                                    <option>Icelander</option>
+                                    <option>Indian</option>
+                                    <option>Indonesian</option>
+                                    <option>Iranian</option>
+                                    <option>Iraqi</option>
+                                    <option>Israeli</option>
+                                    <option>Italian</option>
+                                    <option>Jamaican</option>
+                                    <option>Japanese</option>
+                                    <option>Jordanian</option>
+                                    <option>Kazakh</option>
+                                    <option>Kenyan</option>
+                                    <option>Korean</option>
+                                    <option>Kuwaiti</option>
+                                    <option>Laotian</option>
+                                    <option>Latvian</option>
+                                    <option>Lebanese</option>
+                                    <option>Liberian</option>
+                                    <option>Libyan</option>
+                                    <option>Leichtensteiner</option>
+                                    <option>Lithuanian</option>
+                                    <option>Luxembourger</option>
+                                    <option>Macedonian</option>
+                                    <option>Madagascan</option>
+                                    <option>Malawian</option>
+                                    <option>Malaysian</option>
+                                    <option>Maldivian</option>
+                                    <option>Malian</option>
+                                    <option>Maltese</option>
+                                    <option>Mauritanian</option>
+                                    <option>Mauritian</option>
+                                    <option>Mexican</option>
+                                    <option>Moldovan</option>
+                                    <option>Monacan</option>
+                                    <option>Mongolian</option>
+                                    <option>Montenegrin</option>
+                                    <option>Moroccan</option>
+                                    <option>Mozambican</option>
+                                    <option>Namibian</option>
+                                    <option>Nepalese</option>
+                                    <option>Nicaraguan</option>
+                                    <option>Nigerien</option>
+                                    <option>Nigerian</option>
+                                    <option>Norwegian</option>
+                                    <option>Pakistani</option>
+                                    <option>Panamanian</option>
+                                    <option>Paraguayan</option>
+                                    <option>Peruvian</option>
+                                    <option>Pole</option>
+                                    <option>Portuguese</option>
+                                    <option>Qatari</option>
+                                    <option>Romanian</option>
+                                    <option>Russian</option>
+                                    <option>Rwandan</option>
+                                    <option>Salvadorean</option>
+                                    <option>Saudi</option>
+                                    <option>Scot</option>
+                                    <option>Senegalese</option>
+                                    <option>Serbian</option>
+                                    <option>Singaporean</option>
+                                    <option>Slovak</option>
+                                    <option>Somali</option>
+                                    <option>Spaniard</option>
+                                    <option>Sri Lankan</option>
+                                    <option>Sudanese</option>
+                                    <option>Surinamese</option>
+                                    <option>Swazi</option>
+                                    <option>Swede</option>
+                                    <option>Swiss</option>
+                                    <option>Syrian</option>
+                                    <option>Taiwanese</option>
+                                    <option>Tadzhik</option>
+                                    <option>Tanzanian</option>
+                                    <option>Thai</option>
+                                    <option>Togolese</option>
+                                    <option>Trinidadian</option>
+                                    <option>Tunisian</option>
+                                    <option>Turk</option>
+                                    <option>Ugandan</option>
+                                    <option>Urkrainian</option>
+                                    <option>Uruguayan</option>
+                                    <option>Uzbek</option>
+                                    <option>Venenzuelan</option>
+                                    <option>Welshman</option>
+                                    <option>Yemeni</option>
+                                    <option>Yugoslav</option>
+                                    <option>Zambian</option>
+                                    <option>Zimbabwean</option>
+                                    </datalist>
+                                    <div class='form-group col-xs-12 col-md-4 col-lg-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='employeeBirthDay'>Birthday</label>
+                                       <div class='col-xs-12'>
+                                          <div class="input-group date form_date col-lg-12" data-date-format="MM dd, yyyy">
+                                             <input class="form-control" size="16" type="text" value="" id="employeeBirthDay" name="employeeBirthDay" readonly>
+                                             <span class="input-group-addon">
+                                                <div class="glyphicon glyphicon-remove"></div>
+                                             </span>
+                                             <span class="input-group-addon">
+                                                <div class="glyphicon glyphicon-calendar"></div>
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-12 col-md-4 col-lg-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='height'>Height *</label>
+                                       <div class='col-xs-12'>
+                                          <div class='form-group'>
+                                             <input class='required form-control' name="empHeight" id="empHeight" placeholder="cm" type='text'>
+                                          </div>
+                                       </div>
+                                       <label class='col-xs-6 control-label' for='weight'>Weight *</label>
+                                       <div class='col-xs-12'>
+                                          <div class='form-group'>
+                                             <input class='required form-control' name="empWeight" id="empWeight" placeholder="kg" type='text'>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-12 col-md-4 col-lg-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='bloodType'>Blood Type</label>
+                                       <div class='col-xs-12 form-group'>
+                                          <select class="selectpicker col-xs-12 form-control" data-style='btn-white' id="bloodType" name="bloodType">
+                                             <option data-hidden="true"></option>
+                                             <option value="A+">A+</option>
+                                             <option value="A-">A-</option>
+                                             <option value="B+">B+</option>
+                                             <option value="B-">B-</option>
+                                             <option value="O+">O+</option>
+                                             <option value="O-">O-</option>
+                                             <option value="AB+">AB+</option>
+                                             <option value="AB-">AB-</option>
+                                          </select>
+                                       </div>
+                                       <label class='col-xs-12 control-label form-group' for='maritalStatus'>Marital Status *</label>
+                                       <div class='col-xs-12 form-group'>
+                                          <select class="selectpicker col-xs-12 form-control" name="maritalStatus" id="maritalStatus" data-style='btn-white' onchange='status()'>
+                                             <option value="" disabled selected>--Select Marital Status--</option>
+                                             <option value="Single">Single</option>
+                                             <option value="Married">Married</option>
+                                             <option value="Separated">Separated</option>
+                                             <option value="Divorced">Divorced</option>
+                                             <option value="Widowed">Widowed</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-12 col-md-4 col-lg-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='allergies'>Any allergies</label>
+                                       <div class='col-xs-12'>
+                                          <textarea class='required form-control' id='empAllergies' name='empAllergies' rows='6'></textarea>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                                    <div class='form-group col-xs-12 col-sm-12 col-md-6 col-lg-6 clearfix'>
+                                       <label class='col-xs-12 col-sm-12 col-md-12 col-lg-12 control-label'>
+                                       Gender *
+                                       </label>
+                                       <div class="col-xs-12 col-md-12 col-lg-12">
+                                          <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                                             <input id='male' class='male' name="gender" value="Male" type='radio'>
+                                             <label for='male'>Male</label>
+                                          </div>
+                                          <div class='col-xs-6 col-sm-6 col-md-6 col-lg-6'>
+                                             <input id='female' name="gender" value="Female" class='female' type='radio'>
+                                             <label for='female'>Female</label>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-12 col-md-6 col-lg-6 clearfix'>
+                                       <label class='col-xs-12 control-label' for='empMobile'>Mobile No.</label>
+                                       <div class='col-xs-12'>
+                                          <div class=' input-group'>
+                                             <span class="input-group-addon">+63</span>
+                                             <input class='required form-control passValue' name="empMobile" placeholder="xxxxxxxxxx" id="empMobile" type='text'>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div id="employment" hidden>
+                                 <hr>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-3 clearfix'>
+                                          <label class='col-xs-12 control-label'>
+                                          Employment Type *
+                                          </label>
+                                          <div id=''class="col-xs-12">
+                                             <div class='radio-inline'>
+                                                <input id='regular' name="empType" value="Regular" type='radio'><label for="regular">Regular</label>
+                                             </div>
+                                             <div class='radio-inline'>
+                                                <input id='not_regular' name="empType" value="Not Regular" type='radio'><label for="not_regular">Contractual</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div id="vac_leave" class='form-group col-xs-3 clearfix' hidden>
+                                          <label class='col-xs-12 control-label' for='vacLeave'>Max Vacation Leave *</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="vacLeave" id="vacLeave" type='text'>
+                                          </div>
+                                       </div>
+                                       <div id="sick_leave" class='form-group col-xs-3 clearfix' hidden>
+                                          <label class='col-xs-12 control-label' for='sickLeave'>Max Sick Leave *</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="sickLeave" id="sickLeave" type='text'>
+                                          </div>
+                                       </div>
+                                       <div id='mat_leave' class='form-group col-xs-3 clearfix' hidden>
+                                          <label class='col-xs-12 control-label' for='maternalLeave'>Max Maternal Leave *</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="maternalLeave" id="maternalLeave" type='text'>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-3 clearfix'>
+                                          <label class='col-xs-12 control-label' for='pagibig'>Pag-ibig No. *</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="pagibig" id="pagibig" type='text'>
+                                          </div>
+                                       </div>
+                                       <div class='form-group col-xs-3 clearfix'>
+                                          <label class='col-xs-12 control-label' for='philhealth'>Philhealth No. *</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="philhealth" id="philhealth" type='text'>
+                                          </div>
+                                       </div>
+                                       <div class='form-group col-xs-3 clearfix'>
+                                          <label class='col-xs-12 control-label' for='sss'>SSS No. *</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="sss" id="sss" type='text'>
+                                          </div>
+                                       </div>
+                                       <div class='form-group col-xs-3 clearfix'>
+                                          <label class='col-xs-12 control-label' for='tin'>TIN *</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="tin" id="tin" type='text'>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-12 clearfix'>
+                                       <label class='col-xs-12 control-label' for='remarks'>Remarks (if any)</label>
+                                       <div class='col-xs-12'>
+                                          <textarea class='required form-control' id='remarks' name='remarks' rows='6'></textarea>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='form-group clearfix'>
+                                 <label class='col-xs-12 control-label'>(*) Mandatory</label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end personal tab-->
+                     <div id="addressInfo" class="tab-pane fade">
+                        <div class="panel panel-custom">
+                           <div class="panel-heading"><i class="fa fa-address-book-o"></i>&nbsp Address Information</div>
+                           <div class="panel-body">
+                              <div class='col-xs-12'>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <h4>PRESENT ADDRESS DETAILS</h4>
+                                    </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class='form-group col-xs-12 clearfix'>
+                                       <div class="col-lg-12">
+                                          <label class='col-xs-12 control-label' for='presentAddress'>Present Address *</label>
+                                       </div>
+                                       <div class="col-lg-4">
+                                          <div class="col-lg-12 form-group clearfix">
+                                             <input class='required form-control' id='employeeUnitNumber' name='employeeUnitNumber' placeholder="Unit Number">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-4">
+                                          <div class='col-lg-12 form-group clearfix'>
+                                             <input class='required form-control' id='employeeHouseNumber' name='employeeHouseNumber' placeholder="House/Bldg/Street Number">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-4">
+                                          <div class='col-lg-12 form-group clearfix'>
+                                             <input class='required form-control' id='employeeStreetName' name='employeeStreetName' placeholder="Street Name">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-4">
+                                          <div class='col-lg-12 form-group clearfix'>
+                                             <input class='required form-control' id='employeeBrgyName' name='employeeBrgyName' placeholder="Barangay/District Name">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-4">
+                                          <div class='col-lg-12 form-group clearfix'>
+                                             <input class='required form-control' id='employeeCity' name='employeeCity' placeholder="City/Municipality">
+                                          </div>
+                                       </div>
+                                       <div class="col-lg-4">
+                                          <div class='col-lg-12 form-group clearfix'>
+                                             <input class='required form-control' id='employeePostalCode' name='employeePostalCode' placeholder="Zip Code">
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-12 col-md-12 col-lg-4 clearfix'>
+                                          <label class='col-xs-12 control-label' for='fathersLandLine'>Landline No.</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="landLineNo" id="landLineNo" type='text'>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <h4>PERMANENT ADDRESS</h4>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-12 clearfix'>
+                                          <div class="row">
+                                             <div class="checkbox checkbox-success">
+                                                <label for="sameAdd" style="color: red;">
+                                                <input id="sameAdd" type="checkbox">
+                                                Same as Pressent address?
+                                                </label>
+                                             </div>
+                                          </div>
+                                          <label class='col-xs-12 control-label' for='permanentAddress'>Permanent Address *</label>
+                                          <div class="col-lg-4">
+                                             <div class="form-group clearfix">
+                                                <input class='required form-control' id='employeeUnitNumber1' name='employeeUnitNumber1' placeholder="Unit Number">
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <div class='form-group clearfix'>
+                                                <input class='required form-control' id='employeeHouseNumber1' name='employeeHouseNumber1' placeholder="House/Bldg/Street Number">
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <div class='form-group clearfix'>
+                                                <input class='required form-control' id='employeeStreetName1' name='employeeStreetName1' placeholder="Street Name">
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <div class='form-group clearfix'>
+                                                <input class='required form-control' id='employeeBrgyName1' name='employeeBrgyName1' placeholder="Barangay/District Name">
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <div class='form-group clearfix'>
+                                                <input class='required form-control' id='employeeCity1' name='employeeCity1' placeholder="City/Municipality">
+                                             </div>
+                                          </div>
+                                          <div class="col-lg-4">
+                                             <div class='form-group clearfix'>
+                                                <input class='required form-control' id='employeePostalCode1' name='employeePostalCode1' placeholder="Zip Code">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-12 col-md-12 col-lg-4 clearfix'>
+                                          <label class='col-xs-12 control-label' for='permanentLandLine'>Landline No.</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' name="permanentLandLine" id="permanentLandLine" type='text'>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class='form-group clearfix'>
+                                    <label class='col-xs-12 control-label'>(*) Mandatory</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end parents tab -->
+                     <div id="familyInfo" class="tab-pane fade">
+                        <div class="panel panel-custom">
+                           <div class="panel-heading"><i class="fa fa-address-book-o"></i>&nbsp Family Information</div>
+                           <div class="panel-body">
+                              <div class='col-lg-12'>
+                                 <h4>PARENT'S INFORMATION</h4>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-8 clearfix'>
+                                       <label class='col-xs-12 control-label' for='fathersName'>Father's Name *</label>
+                                       <div class='col-xs-12'>
+                                          <input class='form-control displayValue' id="fathersName" name="fathersName" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='fathersOccupation'>Occupation</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control displayValue' name="fathersOccupation" id="fathersOccupation" type='text'>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-12 clearfix'>
+                                       <label class='col-xs-12 control-label' for='fathersHighEduc'>Highest Educational Attainment</label>
+                                       <div class='col-xs-12'>
+                                          <select class='selectpicker col-xs-12 form-control' data-style='btn-white' name="fathersHighEduc" id="fathersHighEduc" type='text'>
+                                             <!-- <option value="" disabled selected>--Select Educational Attainment--</option> -->
+                                             <option>None</option>
+                                             <option>Doctorate</option>
+                                             <option>Master's Degree</option>
+                                             <option>Bachelor's Degree</option>
+                                             <option>Associate Degree</option>
+                                             <option>College Undergraduate</option>
+                                             <option>Highschool Graduate</option>
+                                             <option>Elementary Graduate</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-8 clearfix'>
+                                       <label class='col-xs-12 control-label' for='mothersName'>Mother's Name *</label>
+                                       <div class='col-xs-12'>
+                                          <input class='form-control displayValue' name="mothersName" id="mothersName" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='mothersOccupation'>Occupation</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control displayValue' name="mothersOccupation" id="mothersOccupation" type='text'>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-12 clearfix'>
+                                       <label class='col-xs-12 control-label' for='mothersHighEduc'>Highest Educational Attainment</label>
+                                       <div class='col-xs-12'>
+                                          <select class='selectpicker col-xs-12 form-control' data-style='btn-white'  name="mothersHighEduc" type='text'>
+                                             <!-- <option value="" disabled selected>--Select Educational Attainment--</option> -->
+                                             <option>None</option>
+                                             <option>Doctorate</option>
+                                             <option>Master's Degree</option>
+                                             <option>Bachelor's Degree</option>
+                                             <option>Associate Degree</option>
+                                             <option>College Undergraduate</option>
+                                             <option>Highschool Graduate</option>
+                                             <option>Elementary Graduate</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div id="spouseInfo">
+                                 <div class='col-lg-12'>
+                                    <h4>SPOUSE INFORMATION</h4>
+                                 </div>
+                                 <!-- <div class='row'>
+                                    <div class='col-xs-12'>
+                                      <div class='form-group col-xs-6 clearfix'>
+                                        <label class='col-xs-12 control-label' for='maritalStatus'>Marital Status</label>
+                                        <div class='col-xs-12'>
+                                          <select class="selectpicker col-xs-12" name="maritalStatus" id="maritalStatus" data-style='btn-white'>
+                                            <option value="Single">Single</option>
+                                            <option value="Married">Married</option>
+                                            <option value="Separated">Separated</option>
+                                            <option value="Divorced">Divorced</option>
+                                            <option value="Annuled">Annuled</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </div> -->
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 clearfix'>
+                                          <label class='col-xs-12 control-label' for='spouseName'>Spouse Name *</label>
+                                          <div class='col-xs-12'>
+                                             <input class='form-control displayValue' name="spouseName" id="spouseName" type='text'>
+                                          </div>
+                                       </div>
+                                       <div class='form-group col-xs-12 col-sm-12 col-md-4 col-lg-4 clearfix'>
+                                          <label class='col-xs-12 control-label' for='birthDay'>Birthday</label>
+                                          <div class='col-xs-12'>
+                                             <div class="input-group date form_date col-lg-12" data-date="" data-date-format="MM dd, yyyy" data-link-field="dob_father" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="16" type="text" value="" id="birthDay" name="birthDay" readonly>
+                                                <span class="input-group-addon">
+                                                   <div class="glyphicon glyphicon-remove"></div>
+                                                </span>
+                                                <span class="input-group-addon">
+                                                   <div class="glyphicon glyphicon-calendar"></div>
+                                                </span>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class='form-group col-xs-12 col-sm-12 col-md-4 col-lg-4  clearfix'>
+                                          <label class='col-xs-12 control-label' for='spouseOccupation'>Occupation</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control displayValue' name="spouseOccupation" id="spouseOccupation" type='text'>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12">
+                                 <h4>DEPENDENTS (if any)</h4>
+                              </div>
+                              <div class="input-dependent">
+                                 <div class="dependent">
+                                    <div class='row'>
+                                       <div class='col-xs-12'>
+                                          <div class='form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 clearfix'>
+                                             <label class='col-xs-12 control-label' for='mothersHighEduc'>Dependent Name</label>
+                                             <div class='col-xs-12'>
+                                                <input class='required form-control displayValue' id="dependentName" name="dependentName[]" type='text'>
+                                             </div>
+                                          </div>
+                                          <div class='form-group col-xs-12 col-sm-6 col-md-6 col-lg-6 clearfix'>
+                                             <label class='col-xs-12 control-label' for='birthDay'>Dependent Birthday</label>
+                                             <div class='col-xs-12'>
+                                                <input class="form-control" size="16" type="date" value="" id="dependentDOB" name="dependentDOB[]">
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xs-4">
+                                 <button class="btn btn-default btn-md waves-effect waves-light m-b-30 add-dependent">
+                                 <i class="md md-add"></i> Add Dependent</button>
+                              </div>
+                              <div class='form-group clearfix'>
+                                 <label class='col-xs-12 control-label'>(*) Mandatory</label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end guardian tab-->
+                     <div id="educationalInfo" class="tab-pane fade">
+                        <div class="panel panel-custom">
+                           <div class="panel-heading"><i class="fa fa-address-book-o"></i>&nbsp Education Information</div>
+                           <div class="panel-body">
+                              <div class='col-xs-12'>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <h4>EDUCATION DETAILS</h4>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-lg-12'>
+                                       <h5>COLLEGE</h5>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-12 clearfix'>
+                                          <label class='col-xs-12 control-label' for='collegeNameOfSchool'>Name of School</label>
+                                          <div class='col-xs-12'>
+                                             <input class='required form-control passValue' id="collegeNameOfSchool" name="collegeNameOfSchool" type='text'>
+                                          </div>
+                                       </div>
+                                       <div class='form-group col-xs-6 clearfix'>
+                                          <label class='col-xs-12 control-label passValue' for='collegeYearStarted'>Year Started</label>
+                                          <div class='col-xs-12'>
+                                             <div class="form-group">
+                                                <div class="input-group date year col-lg-12" id="collegeYearStarted1" data-date="" data-date-format="yyyy" data-link-field="dob_father" data-link-format="yyyy-mm-dd">
+                                                   <input class="form-control" size="16" type="text" value="" id="collegeYearStarted" name="collegeYearStarted" readonly>
+                                                   <span class="input-group-addon">
+                                                      <div class="glyphicon glyphicon-remove"></div>
+                                                   </span>
+                                                   <span class="input-group-addon">
+                                                      <div class="glyphicon glyphicon-calendar"></div>
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class='form-group col-xs-6 clearfix'>
+                                          <label class='col-xs-12 control-label passValue' for='collegeYearEnded'>Year Ended</label>
+                                          <div class='col-xs-12'>
+                                             <div class="form-group">
+                                                <div class="input-group date year col-lg-12" data-date="" data-date-format="yyyy" data-link-field="dob_father" data-link-format="yyyy-mm-dd" id="collegeYearEnded1">
+                                                   <input class="form-control" size="16" type="text" value="" id="collegeYearEnded" name="collegeYearEnded" readonly>
+                                                   <span class="input-group-addon">
+                                                      <div class="glyphicon glyphicon-remove"></div>
+                                                   </span>
+                                                   <span class="input-group-addon">
+                                                      <div class="glyphicon glyphicon-calendar"></div>
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-12 clearfix'>
+                                          <label class='col-xs-12 control-label' for='collegeEducationalAttainment'>Educational Attainment / Degree Received</label>
+                                          <div class='col-xs-12'>
+                                             <select class="selectpicker col-xs-12 form-control" data-style="btn-white"  name="mothersHighEduc" type="text">
+                                                <option value="" disabled selected>--Select Educational Attainment--</option>
+                                                <option>Doctorate</option>
+                                                <option>Master's Degree</option>
+                                                <option>Bachelor's Degree</option>
+                                                <option>Associate Degree</option>
+                                                <option>College Undergraduate</option>
+                                                <option>Highschool Graduate</option>
+                                                <option>Elementary Graduate</option>
+                                             </select>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class='row'>
+                                    <div class='col-xs-12'>
+                                       <div class='form-group col-xs-12 clearfix'>
+                                          <label class='col-xs-12 control-label' for='collegeAddress'>Address</label>
+                                          <div class='col-xs-12'>
+                                             <textarea class='required form-control passValue' id="collegeAddress" name="collegeAddress" rows='3'></textarea>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="add_profession">
+                                    <div id="professionalClass">
+                                       <div class='row'>
+                                          <div class='col-lg-12'>
+                                             <h5>PROFESSIONAL</h5>
+                                          </div>
+                                       </div>
+                                       <div class='row'>
+                                          <div class='col-xs-12'>
+                                             <div class='form-group col-xs-4 clearfix'>
+                                                <label class='col-xs-12 control-label' for='professionalNameOfSchool'>Name of School</label>
+                                                <div class='col-xs-12'>
+                                                   <input class='required form-control passValue' id="professionalNameOfSchool" name="professionalNameOfSchool[]" type='text'>
+                                                </div>
+                                             </div>
+                                             <div class='form-group col-xs-4 clearfix'>
+                                                <label class='col-xs-12 control-label passValue' for='professionalYearStarted'>Year Started</label>
+                                                <div class='col-xs-12'>
+                                                   <div class="form-group">
+                                                      <select style="width: 260px; font-size: 100%;" class="form-control"  name="professionalYearStarted[]" id="professionalYearStarted1"></select>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class='form-group col-xs-4 clearfix'>
+                                                <label class='col-xs-12 control-label passValue' for='professionalYearEnded'>Year Ended</label>
+                                                <div class='col-xs-12'>
+                                                   <select style="width: 260px; font-size: 100%;" class="form-control"  name="professionalYearEnded[]" id="professionalYearEnded1"></select>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class='row'>
+                                          <div class='col-xs-12'>
+                                             <div class='form-group col-xs-12 clearfix'>
+                                                <label class='col-xs-12 control-label' for='professionalEducAttainment'>Educational Attainment / Degree Received</label>
+                                                <div class='col-xs-12'>
+                                                   <input class='required form-control passValue' id="professionalEducAttainment" name="professionalEducAttainment[]" type='text'>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class='row'>
+                                          <div class='col-xs-12'>
+                                             <div class='form-group col-xs-12 clearfix'>
+                                                <label class='col-xs-12 control-label' for='professionalAddress'>Address</label>
+                                                <div class='col-xs-12'>
+                                                   <textarea class='required form-control passValue' id="professionalAddress" name="professionalAddress[]" rows='3'></textarea>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4">
+                                    <button class="btn btn-default btn-md waves-effect waves-light m-b-30 add-prof">
+                                    <i class="md md-add"></i>Add Profession</a></button>
+                                 </div>
+                                 <div class="add_seminar">
+                                    <div id="seminar">
+                                       <div class='row'>
+                                          <div class='col-lg-12'>
+                                             <h4>Training/Seminar Attended</h4>
+                                          </div>
+                                       </div>
+                                       <div class='row'>
+                                          <div class='col-xs-12'>
+                                             <div class='form-group col-xs-4 clearfix'>
+                                                <label class='col-xs-12 control-label' for='topicName'>Topic Name</label>
+                                                <div class='col-xs-12'>
+                                                   <input class='required form-control passValue' id="topicName" name="topicName[]" type='text'>
+                                                </div>
+                                             </div>
+                                             <div class='form-group col-xs-4 clearfix'>
+                                                <label class='col-xs-12 control-label passValue' for='topicDateStarted'>Date Started</label>
+                                                <div class='col-xs-12'>
+                                                   <div class="form-group">
+                                                      <input class="form-control" size="16" type="date" value="" id="topicDateStarted" name="topicDateStarted[]">
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class='form-group col-xs-4 clearfix'>
+                                                <label class='col-xs-12 control-label passValue' for='topicDateEnded'>Date Ended</label>
+                                                <div class='col-xs-12'>
+                                                   <div class="form-group">
+                                                      <input class="form-control" size="16" type="date" value="" id="topicDateEnded" name="topicDateEnded[]">
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class='row'>
+                                          <div class='col-xs-12'>
+                                             <div class='form-group col-xs-12 clearfix'>
+                                                <label class='col-xs-12 control-label' for='topicAddress'>Address</label>
+                                                <div class='col-xs-12'>
+                                                   <textarea class='required form-control passValue' id="topicAddress" name="topicAddress[]" rows='3'></textarea>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="row">
+                                          <div class="col-xs-12">
+                                             <div class='form-group col-xs-12 clearfix'>
+                                                <label class='col-xs-12 control-label' for='upload'>Upload Certificate</label>
+                                                <div class='col-xs-12'>
+                                                   <span class="btn-file">
+                                                   <input class="required" type="file" name="uploadCert[]" id="uploadCert"></br>
+                                                   </span>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-4">
+                                    <button class="btn btn-default btn-md waves-effect waves-light m-b-30 add-seminar">
+                                    <i class="md md-add"></i> Add More</button>
+                                 </div>
+                                 <div class='form-group clearfix'>
+                                    <label class='col-xs-12 control-label'>(*) Mandatory</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="schoolInfo" class="tab-pane fade">
+                        <div class="panel panel-custom">
+                           <div class="panel-heading"><i class="fa fa-address-book-o"></i>Work Experience</div>
+                           <div class="panel-body">
+                              <div class="work_details">
+                                 <div class="workdetails" name="work">
+                                    <div class='row'>
+                                       <div class='col-xs-12'>
+                                          <h4 class="remove">WORK EXPERIENCE</h4>
+                                       </div>
+                                    </div>
+                                    <div class='row'>
+                                       <div class='col-xs-12'>
+                                          <div class='form-group col-xs-4 clearfix'>
+                                             <label class='col-xs-12 control-label' for='expNameOfCompany'>Name of Company</label>
+                                             <div class='col-xs-12'>
+                                                <input class='required form-control passValue' name="expNameOfCompany[]" id="expNameOfCompany" type='text'>
+                                             </div>
+                                          </div>
+                                          <div class='form-group col-xs-4 clearfix'>
+                                             <label class='col-xs-12 control-label passValue' for='expYearStarted1'>Year Started</label>
+                                             <div class='col-xs-12'>
+                                                <select style="width: 260px; font-size: 100%;" class="form-control" name="expYearStarted[]" id="expYearStart1"></select>
+                                             </div>
+                                          </div>
+                                          <div class='form-group col-xs-4 clearfix'>
+                                             <label class='col-xs-12 control-label passValue' for='expYearEnded1'>Year Ended</label>
+                                             <div class='col-xs-12'>
+                                                <select style="width: 260px; font-size: 100%;" class="form-control"  name="expYearEnded[]" id="expYearEnd1"></select>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='expOldSupervisor'>Old Supervisor</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control passValue' name="expOldSupervisor[]" id="expOldSupervisor" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='row'>
+                                       <div class='col-xs-12'>
+                                          <div class='form-group col-xs-12 clearfix'>
+                                             <label class='col-xs-12 control-label' for='expAddress'>Address</label>
+                                             <div class='col-xs-12'>
+                                                <textarea class='required form-control passValue' id="expAddress" name="expAddress[]" rows='3'></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class='row'>
+                                       <div class='col-xs-12'>
+                                          <div class='form-group col-xs-12 clearfix'>
+                                             <label class='col-xs-12 control-label' for='expReasonOfLeaving'>Reason of Leaving (Be Specific)</label>
+                                             <div class='col-xs-12'>
+                                                <textarea class='required form-control passValue' id="expReasonOfLeaving" name="expReasonOfLeaving[]" rows='3'></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class='row'>
+                                       <div class='col-xs-12'>
+                                          <div class='form-group col-xs-12 clearfix'>
+                                             <label class='col-xs-12 control-label' for='expSkills'>Experience (Discuss what did you do in the company e.g. skills used or learned, advancements or promotions)</label>
+                                             <div class='col-xs-12'>
+                                                <textarea class='required form-control passValue' id="expSkills" name="expSkills[]" rows='3'></textarea>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class="col-xs-12">
+                                          <div class="col-lg-12">
+                                             <div class="col-sm-12">
+                                                <button class="btn btn-default btn-md waves-effect waves-light m-b-30 add-inputs">
+                                                <i class="md md-add"></i>Add More</button>
+                                             </div>
+                                             <div class='form-group clearfix'>
+                                                <label class='col-xs-12 control-label'>(*) Mandatory</label>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>                            
+                           </div>
+                        </div>
+                     </div>
+                     <div id="references" class="tab-pane fade">
+                        <div class="panel panel-custom">
+                           <div class="panel-heading"><i class="fa fa-address-book-o"></i>&nbsp References</div>
+                           <div class="panel-body">
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <h4>REFERENCE #1</h4>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-8 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refOneName'>Name</label>
+                                       <div class='col-xs-12'>
+                                          <input class='form-control displayValue' id="refOneName" name="refOneName" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label passValue' for='refYearAcquainted'>Years Acquainted</label>
+                                       <div class='col-xs-12'>
+                                          <div class="form-group">
+                                             <input class='form-control displayValue' id="refYearAcquainted" name="refYearAcquainted" type='text'>
+                                             <!-- <div class="input-group date form_date col-lg-12" data-date="" data-date-format="yyyy" data-link-field="dob_father" data-link-format="yyyy-mm-dd">
+                                                <input class="form-control" size="16" type="text" value="" id="refYearAcquainted" name="refYearAcquainted" readonly>
+                                                <span class="input-group-addon"><div class="glyphicon glyphicon-remove"></div></span>
+                                                <span class="input-group-addon"><div class="glyphicon glyphicon-calendar"></div></span>
+                                                </div> -->
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-8 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refContactNo'>Contact Number</label>
+                                       <div class='col-xs-12'>
+                                          <input class='form-control displayValue' id="refContactNo" name="refContactNo" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refEmailAddress'>Email Address</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control displayValue' id="refEmailAddress" name="refEmailAddress" type='email'>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-8 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refOccupation'>Occupation</label>
+                                       <div class='col-xs-12'>
+                                          <input class='form-control displayValue' id="refOccupation" name="refOccupation" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refCompanyName'>Company Name</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control displayValue' id="refCompanyName" name="refCompanyName" type='text'>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-12 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refAddress'>Address</label>
+                                       <div class='col-xs-12'>
+                                          <textarea class='required form-control passValue' id="refAddress" name="refAddress" rows='3'></textarea>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <h4>REFERENCE #2</h4>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-8 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refTwoName'>Name</label>
+                                       <div class='col-xs-12'>
+                                          <input class='form-control displayValue' id="refTwoName" name="refTwoName" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label passValue' for='refTwoYearAcquainted'>Years Acquainted</label>
+                                       <div class='col-xs-12'>
+                                          <div class="form-group">
+                                             <input class='form-control displayValue' id="refTwoYearAcquainted" name="refTwoYearAcquainted" type='text'>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-8 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refTwoContactNo'>Contact Number</label>
+                                       <div class='col-xs-12'>
+                                          <input class='form-control displayValue' id="refTwoContactNo" name="refTwoContactNo" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refTwoEmailAddress'>Email Address</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control displayValue' id="refTwoEmailAddress" name="refTwoEmailAddress" type='email'>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-8 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refTwoOccupation'>Occupation</label>
+                                       <div class='col-xs-12'>
+                                          <input class='form-control displayValue' name="refTwoOccupation" id="refTwoOccupation" type='text'>
+                                       </div>
+                                    </div>
+                                    <div class='form-group col-xs-4 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refTwoCompanyName'>Company Name</label>
+                                       <div class='col-xs-12'>
+                                          <input class='required form-control displayValue' id="refTwoCompanyName" name="refTwoCompanyName" type='text'>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='row'>
+                                 <div class='col-xs-12'>
+                                    <div class='form-group col-xs-12 clearfix'>
+                                       <label class='col-xs-12 control-label' for='refTwoAddress'>Address</label>
+                                       <div class='col-xs-12'>
+                                          <textarea class='required form-control passValue' id="refTwoAddress" name="refTwoAddress" rows='3'></textarea>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="requirements" class="tab-pane fade">
+                        <div class="panel panel-custom">
+                           <div class="panel-heading"><i class="fa fa-address-book-o"></i>&nbsp Employee Requirements</div>
+                           <div class="panel-body">
+                              <div class="col-lg-12">
+                                 <h4>LIST OF REQUIREMENTS</h4>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <label class='col-lg-2 control-label' for='schoolyear'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check m-r-5 green-icon"></i></label>
+                                    <label class="col-lg-4 control-label" for="schoolyear">Tax payer Identification Number (TIN) *</label>
+                                    <div class="form-group col-lg-6 clearfix">
+                                       <span class="btn btn-white btn-file">
+                                       <input type="file" id="tinNumber" name="tinNumber">
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <label class='col-lg-2 control-label' for='reportCard'>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check m-r-5 green-icon" ></i>
+                                    </label>
+                                    <label class="col-lg-4 control-label" for="reportCard">Social Security System Number *</label>
+                                    <div class=" form-group col-lg-6 clearfix">
+                                       <span class="btn btn-white btn-file">
+                                       <input type="file" id="sssNumber" name="sssNumber">
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <label class='col-lg-2 control-label' for='goodMoralCharacter'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times m-r-5 red-icon" ></i></label>
+                                    <label class="col-lg-4 control-label" for="goodMoralCharacter">Pagibig Number *</label>
+                                    <div class="form-group col-lg-6 clearfix">
+                                       <span class="btn btn-white btn-file">
+                                       <input type="file" id="pagibigNumber" name="pagibigNumber">
+                                       </span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <label class='col-lg-2 control-label' for='medicalRecords'>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check m-r-5 green-icon" ></i>
+                                    </label>
+                                    <label class="col-lg-4 control-label" for="medicalRecords">Philhealth Number *</label>
+                                    <div class=" form-group col-lg-6 clearfix">
+                                       <span class="btn btn-white btn-file">
+                                       <input type="file" id="philhealthNumber" name="philhealthNumber">
+                                       </span> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class="col-lg-12">
+                                    <label class='col-lg-2 control-label' for='medicalRecords'>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check m-r-5 green-icon" ></i>
+                                    </label>
+                                    <label class="col-lg-4 control-label" for="medicalRecords">NBI Clearance *</label>
+                                    <div class=" form-group col-lg-6 clearfix">
+                                       <span class="btn btn-white btn-file">
+                                       <input type="file" id="nbiClearance" name="nbiClearance">
+                                       </span> 
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="input-others">
+                                 <div class="others">
+                                    <div class="row">
+                                       <div class="col-lg-12">
+                                          <label class='col-lg-2 control-label' for='otherRecords'>
+                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-check m-r-5 green-icon" ></i>
+                                          </label>
+                                          <div class=" form-group col-lg-4 clearfix">
+                                             <input type="text" class="col-lg-4 form-control" name="other" id="other" placeholder="Other Requirements">
+                                          </div>
+                                          <div class=" form-group col-lg-6 clearfix">
+                                             <span class="btn btn-white btn-file">
+                                             <input type="file" id="otherRecords" name="otherRecords">
+                                             </span> 
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 <div class='form-group col-lg-12 clearfix'>
+                                    <div class='col-lg-'>
+                                       <button class='btn btn-default m-l-5' type='button' name="addOther" id="addOther">
+                                       Add more
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='form-group clearfix'>
+                                 <label class='col-lg-12 control-label'>(*) Mandatory</label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            <input type="hidden" name="_token" value="wZElGIFfGeoOZtWD6J3AliKzw8yld2IBOGsdPuFr">
+            <!-- Previous/Next buttons -->
+            </form>
+            <!-- <div class="success_message">
+               </div> -->
+         </div>
+      </div>
+      <!-- end of your code -->
+      <!-- footer here -->
+      <hr />
+      <footer class="navbar-fixed-bottom">
+         <div class="container-fluid footer">
+            <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
+         </div>
+      </footer>
+      <!-- end foooter -->
+      <!-- Form App PRINT -->
+      <div id="AppForm" style="height: 11in; width: 8.5in;" hidden="">
+         <img src="../../Content/Images/HumanResource/AddNewEmployeePage1.jpg" style="height: auto; width: 100%;">
+         <img src="../../Content/Images/HumanResource/AddNewEmployeePage2.jpg" style="height: auto; width: 100%;">
+         <img src="../../Content/Images/HumanResource/AddNewEmployeePage3.jpg" style="height: auto; width: 100%;">
+      </div>
+
+
+      @Scripts.Render("~/Scripts/js/Hr/addEmployee.js")
+

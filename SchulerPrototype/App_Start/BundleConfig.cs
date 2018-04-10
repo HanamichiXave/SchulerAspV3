@@ -60,6 +60,13 @@ namespace SchulerPrototype
 
             bundles.Add(new StyleBundle("~/Content/datatables").Include(
                       "~/Content/CSSDataTables/dataTables.bootstrap.min.css"));
+
+            bundles.Add(new StyleBundle("~/Content/datepickercss").Include(
+                      "~/Content/datepicker/datepicker.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/datepickerjs").Include(
+                      "~/Content/datepicker/bootstrap-datetimepicker.js"));
+            
         }
     }
 }

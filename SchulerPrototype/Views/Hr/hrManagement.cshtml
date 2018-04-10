@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "hr_management";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <br>
+    <br>
+    <div class="page-header" style="color: #000033">
+        <center><h2><strong>Hr Management</strong></h2><br /></center>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center-block">
+            <a href="@Url.Action("addEmployee", "Hr")">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/Hr/add.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                        <h2>Add New Employee</h2>
+                        <p class="info">
+                            Add an employee by filling up all forms needed.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center-block">
+            <a href="@Url.Action("empList", "Hr")">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/Hr/employeelist.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                        <h2>Employee List</h2>
+                        <p class="info">
+                            View a list of every currently employed staffs and their informations.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 center-block">
+            <a href="@Url.Action("hrPayroll", "Hr")">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/Hr/payroll.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                        <h2>Payroll</h2>
+                        <p class="info">
+                            Different lists of payroll for different departments.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 center-block">
+            <a href="@Url.Action("hrAttendance", "Hr")">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/Hr/list.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                        <h2>Employee Attendance</h2>
+                        <p class="info">
+                            A record of attendance for every department member.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 center-block">
+            <a href="@Url.Action("empLeave", "Hr")">
+                <div class="hovereffect">
+                    <img class="img-responsive" src="~/Content/images/Hr/leave.png" height="100" width="100" alt="" />
+                    <div class="overlay">
+                        <h2>Leaves & Absences</h2>
+                        <p class="info">
+                            A list of all the leaves and absences an employee committed.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div> 
+
+
