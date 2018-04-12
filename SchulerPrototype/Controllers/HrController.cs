@@ -20,14 +20,30 @@ namespace SchulerPrototype.Controllers
         {
             return View();
         }
+        public ActionResult hrResigned()
+        {
+            return View();
+        }
+        public ActionResult addEmployeeType()
+        {
+            return View();
+        }
+        public ActionResult hrEmployeeLeave()
+        {
+            return View();
+        }
+        public ActionResult hrDeducType()
+        {
+            return View();
+        }
+
+
+       
         public ActionResult hrPayroll()
         {
             return View();
         }
-        public ActionResult empLeave()
-        {
-            return View();
-        }
+        
         public ActionResult hrAttendance()
         {
             return View();

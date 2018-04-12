@@ -475,7 +475,6 @@
     <Content Include="Views\Hr\addEmployee.cshtml" />
     <Content Include="Views\Hr\empList.cshtml" />
     <Content Include="Views\Hr\hrPayroll.cshtml" />
-    <Content Include="Views\Hr\empLeave.cshtml" />
     <Content Include="Views\Hr\hrAttendance.cshtml" />
     <Content Include="Content\images\Hr\add.png" />
     <Content Include="Content\images\Hr\employeelist.png" />
@@ -495,15 +494,14 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Admission.cshtml" />
     <Content Include="Views\Admin\Enrollment.cshtml" />
+    <Content Include="Views\Hr\hrResigned.cshtml" />
+    <Content Include="Views\Hr\addEmployeeType.cshtml" />
+    <Content Include="Views\Hr\hrEmployeeLeave.cshtml" />
+    <Content Include="Views\Hr\hrDeducType.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Hr\" />
-    <Folder Include="Content\images\Hr\" />
-    <Folder Include="Scripts\js\Hr\" />
-    <Folder Include="Content\datepicker\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

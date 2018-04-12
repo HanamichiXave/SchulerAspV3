@@ -1,0 +1,146 @@
+﻿<!D@{
+
+
+    ViewBag.Title = "Deduction Type";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <br>
+    <br>
+    <div class="page-header" style="color: #000033">
+        <h2><strong>Deduction Type</strong></h2>
+    </div>
+    <ol class="breadcrumb" style="background-color: #D9EDF7">
+        <li><a href="@Url.Action("hrManagement", "Hr")"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+        <li>Deduction Type</li>
+    </ol>
+
+    <section class="card-box">
+        <div class="panel panel-custom">
+            <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Deduction Type List</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group contact-search m-b-30">
+                            <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#deducType">&nbsp&nbspAdd Deduction Type</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="myTable" class="display nowrap table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th style="max-width: 100px;">
+                                    #
+                                </th>
+
+                                <th>Deduction Type</th>
+                                <th>Percentage</th>
+                                <th>Total Amount</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+
+                                <td>1</td>
+                                <td>SSS</td>
+                                <td>5%</td>
+                                <td>PHP 500</td>
+                                <td><a href="" id="view" class="btn btn-info btn-md " data-toggle="modal" data-target="#editModal">Edit</a> <!-- not functional --></td>
+                             </tr>
+                         </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div class="modal fade" id="deducType" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Deduction Type Form</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-custom">
+
+                    <div class="panel-body">
+
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                            <div class="panel panel-body">
+                                <div class="col-lg-4 m-t-b-xs">
+                                    <label class="control-label">Deduction Type</label>
+                                    <input class="required form-control" type="text" id="deduc_type" name="deduc_type">
+                                </div>
+                                <div class="col-lg-4 m-t-b-xs">
+                                    <label class="control-label">Percentage</label>
+                                    <input class="required form-control" type="text" id="deduc_type" name="percentage">
+                                </div>
+                                <div class="col-lg-4 m-t-b-xs">
+                                    <label class="control-label">Total Amount</label>
+                                    <input class="required form-control" type="text" id="deduc_type" name="total_amount">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Submit  </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Deduction Type Form</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-custom">
+                  
+                    <div class="panel-body">
+
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+
+                            <div class="panel panel-body">
+                                <div class="col-lg-4 m-t-b-xs">
+                                    <label class="control-label">Deduction Type</label>
+                                    <input class="required form-control" type="text" id="deduc_type" name="deduc_type" value="SSS">
+                                </div>
+                                <div class="col-lg-4 m-t-b-xs">
+                                    <label class="control-label">Percentage</label>
+                                    <input class="required form-control" type="text" id="deduc_type" name="percentage" value="5%">
+                                </div>
+                                <div class="col-lg-4 m-t-b-xs">
+                                    <label class="control-label">Total Amount</label>
+                                    <input class="required form-control" type="text" id="deduc_type" name="total_amount" value="PHP 500">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

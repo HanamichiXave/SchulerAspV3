@@ -1,0 +1,126 @@
+﻿<!D@{
+
+
+    ViewBag.Title = "Add Employee Type";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <br>
+    <br>
+    <div class="page-header" style="color: #000033">
+        <h2><strong>Employee Type</strong></h2>
+    </div>
+    <ol class="breadcrumb" style="background-color: #D9EDF7">
+        <li><a href="@Url.Action("hrManagement", "Hr")"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+        <li>Employee Type</li>
+    </ol>
+
+    <section class="card-box">
+        <div class="panel panel-custom">
+            <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Employee Type List</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="form-group contact-search m-b-30">
+                            <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <button type="button" class="btn btn-info btn-md waves-effect waves-light m-b-30" style="height: 40px; margin-top: 7px;" data-toggle="modal" data-target="#addEmployeeType">&nbsp&nbspAdd Employee Type</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table id="myTable" class="display nowrap table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th style="max-width: 100px;">
+                                    #
+                                </th>
+
+                                <th>Employee Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td>1</td>
+                                <td>Principal</td>
+                             
+                            </tr>
+
+                            <tr class="">
+                                <td>2</td>
+                                <td>Teacher I</td>
+                            </tr>
+
+                            <tr class="">
+                                <td>2</td>
+                                <td>Teacher II</td>
+                            </tr>
+
+                            <tr class="">
+                                <td>2</td>
+                                <td>I.T Head</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<div class="modal fade" id="addEmployeeType" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Employee Type Form</h4>
+            </div>
+            <div class="modal-body">
+                <div class="panel panel-custom">
+                    <div class="panel-heading"><i class="fa fa-bar-chart"></i>&nbsp&nbsp Employee Type</div>
+                    <div class="panel-body">
+                       
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                                
+                            <div class="panel panel-body">
+                                <div class="col-lg-6 m-t-b-xs">
+                                    <label class="control-label">Employee Type</label>
+                                    <input class="required form-control" type="text" id="emp_type" name="emp_type">
+                                </div>
+                                <div class="col-lg-6 m-t-b-xs">
+                                    <label class="control-label">Employee Status</label>
+                                    <select class="form-control" name="emp_status">
+                                        <option hidden="">-- Please Select --</option>
+                                        <option>Regular</option>
+                                        <option>Contractual</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-6 m-t-b-xs">
+                                    <label class="control-label">Vacation Leave</label>
+                                    <input class="required form-control" type="number" name="v_leave">
+                                </div>
+                                <div class="col-lg-6 m-t-b-xs">
+                                    <label class="control-label">Sick Leave</label>
+                                    <input class="required form-control" type="text" name="s_leave">
+                                </div>
+                                <div class="col-lg-6 m-t-b-xs">
+                                    <label class="control-label">Rate</label>
+                                    <input class="required form-control" type="text" name="rate">
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-info" data-dismiss="modal">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
