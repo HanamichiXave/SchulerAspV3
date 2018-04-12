@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{45EDD58B-2FD6-4A69-8EF7-0B16452F406F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SchulerPrototype/Views/superadmin/Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SchulerPrototype/Views/Admin/Enrollment.cshtml">
     <Files>
-      <File FileName="SchulerPrototype/Views/Shared/_Layout.cshtml" Line="9" Column="41" />
-      <File FileName="SchulerPrototype/Controllers/AdminController.cs" Line="21" Column="27" />
-      <File FileName="SchulerPrototype/Views/Admin/Index.cshtml" Line="26" Column="54" />
+      <File FileName="SchulerPrototype/Views/Admin/enrollment-payment.html" Line="1" Column="1" />
       <File FileName="SchulerPrototype/Views/Admin/Admission.cshtml" Line="1" Column="1" />
-      <File FileName="SchulerPrototype/Views/superadmin/Index.cshtml" Line="45" Column="40" />
+      <File FileName="SchulerPrototype/Views/Admin/Enrollment.cshtml" Line="104" Column="2" />
+      <File FileName="SchulerPrototype/Views/Shared/_Layout.cshtml" Line="9" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
