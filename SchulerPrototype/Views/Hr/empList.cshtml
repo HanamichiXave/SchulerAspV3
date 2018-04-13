@@ -7,547 +7,407 @@
 
 
 
-<!-- end of navigation bar -->
-<div class="container">
-    <br>
-    <br>
-    <div class="page-header" style="color: #000033">
-        <h2><strong>Human Resource Management</strong></h2>
-    </div>
-    <ol class="breadcrumb" style="background-color: #D9EDF7">
-        <li><a href="@Url.Action("hrManagement", "Hr")"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
-        <li>Employee List</li>
-    </ol>
-    <!-- your code start here -->
-    <!-- Please observe indention -->
-    <section class="card-box">
-        <div class="panel panel-custom">
-            <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Employee List</div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-sm-8">
+<div class="container" >
+         <br>
+         <br>
+         <div class="page-header" style="color: #000033">
+            <h2><strong>Human Resource Management</strong></h2>
+         </div>
+         <ol class="breadcrumb" style="background-color: #D9EDF7">
+            <li><a href="hr-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> Home</a></li>
+            <li>Employee List</li>
+         </ol>
+         <!-- your code start here -->
+         <!-- Please observe indention -->
+         <section class="card-box">
+            <div class="panel panel-custom">
+               <div class="panel-heading" style="font-size: 20px; font-weight: 350;"><i class="fa fa-users fa-lg"></i> Employee List</div>
+               <div class="panel-body">
+                  <div class="row">
+                     <div class="col-sm-8">
                         <div class="form-group contact-search m-b-30">
-                            <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
+                           <input type="text" id="search" class="form-control" style="height: 40px; margin-top: 7px;" placeholder="Search...">
                         </div>
-                    </div>
-                </div>
-                <div class="table-responsive">
-                    <table id="myTable" class="display nowrap table table-striped table-hover">
+                     </div>
+                  </div>
+                  <div class="table-responsive">
+                     <table id="myTable" class="display nowrap table table-striped table-hover">
                         <thead>
-                            <tr>
-                                <th style="max-width: 100px;">
-                                    #
-                                </th>
-
-                                <th>Employee No.</th>
-                                <th>Name</th>
-
-                                <th>Action</th>
-                            </tr>
+                           <tr>
+                              <th style="max-width: 95px;">#
+                              </th>
+                              <th style="max-width: 95px;">Photo
+                              </th>
+                              <th>Employee No.</th>
+                              <th>Name</th>
+                              <!-- <th>Date Of Hired</th> -->
+                              <th>Department</th>
+                              <th>Status</th>
+                              <th>Remarks</th>
+                              <th>Employee Profile</th>
+                           </tr>
                         </thead>
                         <tbody>
-                            <tr class="">
-
-                                <td></td>
-
-                                <td>0001-555</td>
-                                <td>Sample</td>
-
-                                <td>
-                                    <a href="" id="view" class="btn btn-info btn-md " data-toggle="modal" data-target="#myModal"> View Profile</a><!-- not functional -->
-                                    <button type="button" class="btn btn-danger"> Resign</button> <!-- not functional -->
-                                    <a href="" id="view" class="btn btn-success btn-md " data-toggle="modal" data-target="#promoteModal"> Promote</a> <!-- not functional -->
-                                </td>
-                            </tr>
-
-
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0001</td>
+                              <td>Alex Vergara</td>
+                              <td>Admin</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0002</td>
+                              <td>Irene PeloBello</td>
+                              <td>Principal</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0003</td>
+                              <td>Mark Bandiola</td>
+                              <td>Teacher</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0004</td>
+                              <td>Angelo Padilla</td>
+                              <td>Teacher</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0005</td>
+                              <td>Gladys Siatan</td>
+                              <td>Teacher</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0006</td>
+                              <td>Jessica Doploso</td>
+                              <td>Teacher</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0007</td>
+                              <td>Angeline Mendoza</td>
+                              <td>Teacher</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0008</td>
+                              <td>Sonny Gagui</td>
+                              <td>Hr</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0009</td>
+                              <td>Joan Canasa</td>
+                              <td>Counselor</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0010</td>
+                              <td>Francis Ocampo</td>
+                              <td>Clinic</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0011</td>
+                              <td>Maria Doce</td>
+                              <td>Teacher</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0012</td>
+                              <td>Rose Naranjo</td>
+                              <td>Teacher</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0013</td>
+                              <td>Cris Resuello</td>
+                              <td>Teacher</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0014</td>
+                              <td>Sherwin Salen</td>
+                              <td>Teacher</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0015</td>
+                              <td>Hannah Dabela</td>
+                              <td>Finance</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0016</td>
+                              <td>Brian Sanchez</td>
+                              <td>Library</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0017</td>
+                              <td>Kenneth Yamson</td>
+                              <td>Hr</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0018</td>
+                              <td>Pat Bias</td>
+                              <td>Clinic</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0019</td>
+                              <td>Eleine Santos</td>
+                              <td>Canteen</td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0020</td>
+                              <td>Sheila Mangaron</td>
+                              <td>Library  </td>
+                              <td>Female</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0021</td>
+                              <td>Calisto Ferrer</td>
+                              <td>Security</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0022</td>
+                              <td>Arnold Dimagiba</td>
+                              <td>Security</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0023</td>
+                              <td>Lorenz Santos</td>
+                              <td>Security</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0024</td>
+                              <td>Joel Arnniego</td>
+                              <td>Security</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0025</td>
+                              <td>Aljon Conghe</td>
+                              <td>Security</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0026</td>
+                              <td>John Paul Fernandez</td>
+                              <td>Security</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0027</td>
+                              <td>Benjamin Gapasin</td>
+                              <td>Security</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0028</td>
+                              <td>Salvador Dela Cruz</td>
+                              <td>Security</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0029</td>
+                              <td>Jerome Salome</td>
+                              <td>Driver</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
+                           <tr>
+                              <td></td>
+                              <td><img src='../../content/images/profilelogo.png' height="60px" width="60px" alt="contact-img" title="contact-img" class="img-circle thumb-sm"/></td>
+                              <td>0030</td>
+                              <td>Juan Dela Cruz</td>
+                              <td>Maintenance</td>
+                              <td>Male</td>
+                              <td></td>
+                              <td><button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal">View Profile</button></td>
+                           </tr>
                         </tbody>
-                    </table>
-                </div>
+                     </table>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
-    <!-- end of your code -->
-
-
-</div>
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Employee Profile</h4>
+         </section>
+         <!-- end of your code -->
+         <!-- footer here -->
+         <hr />
+         <footer class="navbar-fixed-bottom">
+            <div class="container-fluid footer">
+               <p class="pull-right powerby">&copy; 2016 - Powered by <a href="http://www.simplevia.com" class="quicktrackcolor">QuickTrack</a></p>
             </div>
-            <div class="modal-body">
-                <div class="panel panel-custom">
-                    <div class="panel-heading"><i class="fa fa-address-card-o"></i>&nbspEmployee Informations</div>
-                    <div class="panel-body">
+         </footer>
+
+         <!-- end foooter -->
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+         <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Employee Profile</h4>
+               </div>
+               <div class="modal-body">
+                  <div class="panel panel-custom">
+                     <div class="panel-heading"><i class="fa fa-address-card-o"></i>&nbspEmployee Informations</div>
+                     <div class="panel-body">
                         <div class="panel panel-custom">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 form-group" style="margin-top: 10px;">
-                                        <div class="col-lg-12 text-center">
-                                            <img src="http://app.myvesselplanner.com/images/user.jpg" class="img-circle " title="contact-img" alt="contact-img" height="60px" width="60px">
-                                            <div>
-                                                <h6>Employee No: </h6>
-                                            </div>
-
-                                            <div>
-                                                <h5>0001-555</h5>
-                                            </div>
-                                            <div>
-                                                <h6>Sample</h6>
-                                            </div>
-                                        </div>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" style="margin-top: 10px;">
+                                    <div class="col-lg-12 text-center">
+                                       <img src="http://app.myvesselplanner.com/images/user.jpg" class="img-circle " title="contact-img" alt="contact-img" height="100px" width="100px">
+                                       <div>
+                                          <H6>Employee No: 1</H6>
+                                       </div>
+                                       <div>
+                                          <H6>Active</H6>
+                                       </div>
                                     </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 form-group">
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <H5>Attendance:</H5>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <H5></H5>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <H6>Sick Leave</H6>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <H6>5</H6>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <H6>Vacation Leave</H6>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <H6>5</H6>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <H6>Available Leaves</H6>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <H6>8</H6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 form-group">
-                                        <div>
-                                            <H5><b>No. of School Days</b></H5>
-                                        </div>
-                                        <div>
-                                            <H5><b>190</b></H5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                 </div>
+                                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8" style="margin-top: 3%;">
+                                    <label style="font-size: 50px;">awdadawd</label><label>awawdawdaw</label>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="panel panel-custom">
-                                    <div class="table-responsive">
-                                        <H3 style="margin-left: 6px;">Personal Information</H3>
-                                        <table class="display nowrap table table-hover mails m-0 table table-actions-bar">
-                                            <thead>
-                                                <tr></tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="">
-                                                    <td>Birthday</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Nationality</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Religion</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Status</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Height (cm)</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Weight (kg)</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Blood Type</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Any Allergies</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Remarks</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="panel panel-custom">
-                                    <div class="table-responsive">
-                                        <h3 style="margin-left: 6px;">Address Information</h3>
-                                        <table class="table table-hover mails m-0 table table-actions-bar">
-                                            <tbody>
-                                                <tr>
-                                                    <th colspan="2" style="font-weight:bold;">
-                                                        Present Address Details
-                                                    </th>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Present Address</td>
-                                                    <td style="min-width: 350px">test</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Area Code</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Landline No.</td>
-                                                    <td>4324342</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Email Address</td>
-                                                    <td style="min-width: 350px">sample@email.com</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Mobile No.</td>
-                                                    <td style="min-width: 350px">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="2" style="font-weight:bold;">
-                                                        Permanent Address Details
-                                                    </th>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Permanent Address</td>
-                                                    <td style="min-width: 350px">test</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Area Code</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Landline No.</td>
-                                                    <td style="min-width: 350px">4324342</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Email Address</td>
-                                                    <td style="min-width: 350px">sample@email.com</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Mobile No.</td>
-                                                    <td style="min-width: 450px">0</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="panel panel-custom">
-                                    <div class="table-responsive">
-                                        <H3 style="margin-left: 6px;">Family Information</H3>
-                                        <table id="test" class="table table-hover mails m-0 table table-actions-bar">
-                                            <tbody>
-                                                <tr>
-                                                    <th colspan="2" style="font-weight:bold;">
-                                                        Parent's Information
-                                                    </th>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Father's Name</td>
-                                                    <td style="min-width: 350px">test</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Occupation</td>
-                                                    <td style="min-width: 350px">test</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Highest Education Attained</td>
-                                                    <td style="min-width: 350px">None</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Mother's Name</td>
-                                                    <td style="min-width: 350px">test</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Occupation</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Highest Education Attained</td>
-                                                    <td style="min-width: 350px">None</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="2" style="font-weight:bold;">
-                                                        Spouse's Information
-                                                    </th>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Spouse's Name</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Occupation</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>No. of Child</td>
-                                                    <td style="min-width: 350px">0</td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="2" style="font-weight:bold;">Names of Children</th>
-                                                    <input id="child" type="hidden" value="">
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="2"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="panel panel-custom">
-                                    <div class="table-responsive">
-                                        <H3 style="margin-left: 6px;">Uploaded Files</H3>
-                                        <table class="table table-hover mails m-0 table table-actions-bar">
-                                            <thead>
-                                                <tr></tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> Birth Certificate </a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> NSO </a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> Diploma </a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> TOR/Summary of Grades </a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> Barangay Clearance </a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> TIN Card / Form Photocopy </a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> SSS Card / Form Photocopy </a> </td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> Philhealth Card / Form Photocopy </a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> Pag-ibig Card / Form Photocopy </a></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td><a href="#" style="color:blue"> Photocopy of Goverment Valid IDs</a></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="panel panel-custom">
-                                    <div class="table-responsive">
-                                        <H3 style="margin-left: 6px;">Education Information</H3>
-                                        <table class="table table-hover mails m-0 table table-actions-bar">
-                                            <thead>
-                                                <tr></tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <th colspan="2" style="font-weight:bold;">Education Background</th>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>High School</td>
-                                                    <td style="min-width: 350px"> (-)</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Address</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>College</td>
-                                                    <td style="min-width: 350px"> (-)</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Education Attainment/Degree Received</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Address</td>
-                                                    <td style="min-width: 350px"></td>
-                                                </tr>
-                                                <tr>
-                                                    <th colspan="2" style="font-weight:bold;">Seminar/Training Details</th>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="panel panel-custom">
-                                    <div class="table-responsive card-box">
-                                        <H5 style="margin-left: 6px;">Work Experience</H5>
-                                        <table class="table table-hover mails m-0 table table-actions-bar">
-                                            <thead>
-                                                <tr></tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr></tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="panel panel-custom">
-                                    <div class="table-responsive">
-                                        <H3 style="margin-left: 6px;">Employee Goverment ID</H3>
-                                        <table class="table table-hover mails m-0 table table-actions-bar">
-                                            <tbody>
-                                                <tr class="">
-                                                    <td>TIN</td>
-                                                    <td style="min-width: 500px">2147483647</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Pag-ibig No.</td>
-                                                    <td style="min-width: 500px">2147483647</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Philhealth No.</td>
-                                                    <td style="min-width: 500px">2147483647</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>SSS No.</td>
-                                                    <td style="min-width: 500px">2147483647</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                                <div class="panel panel-custom">
-                                    <div class="table-responsive">
-                                        <H3 style="margin-left: 6px;">References</H3>
-                                        <table class="table table-hover mails m-0 table table-actions-bar">
-                                            <tbody>
-                                                <tr class="">
-                                                    <td>Sample 1</td>
-                                                    <td>Simplevia Tech Inc.</td>
-                                                </tr>
-                                                <tr class="">
-                                                    <td>Sample2</td>
-                                                    <td>Simplevia Tech Inc.</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
+                           
+                           awdadaw
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" id="close" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<!-- Promote Modal -->
-<div class="modal fade" id="promoteModal" role="dialog">
-    <div class="modal-dialog modal-lg">
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Promotion Form</h4>
-            </div>
-            <div class="modal-body">
-                <div class="panel panel-custom">
-                    <div class="panel-heading"><i class="fa fa-bar-chart"></i>&nbsp&nbspPromote Employee</div>
-                    <div class="panel-body">
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                            <div class="panel panel-custom p-xs">
-                                <center>
-                                    <img src="http://app.myvesselplanner.com/images/user.jpg" height="170px" width="170px">
-                                </center>
-                                <br><br>
-                                <table class="table table-striped table-responsive">
-                                    <thead>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="">
-                                            <th>Name</th>
-                                            <td class="empName">Sample</td>
-                                        </tr>
-                                        <tr class="">
-                                            <th>Employee No.</th>
-                                            <td class="empNumber">Sample</td>
-                                        </tr>
-                                        <tr class="">
-                                            <th>Department</th>
-                                            <td class="empDept">Sample</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                            <div class="panel panel-custom p-xs">
-                               
-                                <div class="panel-heading"><i class="fa fa-bar-chart"></i>&nbsp&nbspEmployee Information</div>
-                                <div class="panel panel-body">
-                                    <div class="col-lg-6 m-t-b-xs">
-                                        <label class="control-label">Date Hired</label>
-                                        <input class="required form-control" type="text" id="dateHired" name="dateHired" readonly="" value="12-06-2017">
-                                    </div>
-                                    <div class="col-lg-6 m-t-b-xs">
-                                        <label class="control-label">Employee Category</label>
-                                        <select class="form-control" name="empCategory">
-                                            <option hidden="">-- Please Select --</option>
-                                            <option>Regular</option>
-                                            <option>Contractual</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-6 m-t-b-xs">
-                                        <label class="control-label">Last Promoted on</label>
-                                        <input class="required form-control" type="text" name="lastPromoted">
-                                    </div>
-                                    <div class="col-lg-6 m-t-b-xs">
-                                        <label class="control-label">Promoted to</label>
-                                        <input class="required form-control" type="text" name="lastDestination">
-                                    </div>
-                                    
-                                </div>
-                                
-                              
-                                
-                                
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-info" data-dismiss="modal">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+         </div>
+      </div>
