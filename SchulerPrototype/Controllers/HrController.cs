@@ -12,6 +12,11 @@ namespace SchulerPrototype.Controllers
         {
             return View ();
         }
+        public ActionResult employeePages()
+        {
+            return View();
+        }
+
         public ActionResult addEmployee()
         {
             return View();

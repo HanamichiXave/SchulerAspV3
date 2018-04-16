@@ -498,6 +498,7 @@
     <Content Include="Views\Hr\addEmployeeType.cshtml" />
     <Content Include="Views\Hr\hrEmployeeLeave.cshtml" />
     <Content Include="Views\Hr\hrDeducType.cshtml" />
+    <Content Include="Views\Hr\employeePages.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
