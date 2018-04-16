@@ -32,8 +32,8 @@
                              <li id="tab1" class="active window-vertical-style"><a data-toggle="tab" href="#personalInfo"><font size="5" color="black">1. </font>Personal Information</a></li>
                              <li id="tab2" class="window-vertical-style"><a data-toggle="tab" href="#familyInfo"><font size="5" color="black">2. </font>Family Information</a></li>
                              <li id="tab3" class="window-vertical-style"><a data-toggle="tab" href="#educInfo"><font size="5" color="black">3. </font>Education Information</a></li>
-                             <li id="tab4" class="window-vertical-style"><a data-toggle="tab" href="#schoolInfo"><font size="5" color="black">4. </font>Work Experience</a></li>
-                             <li id="tab5" class="window-vertical-style"><a data-toggle="tab" href="#references"><font size="5" color="black">5. </font>References</a></li>
+                             <li id="tab4" class="window-vertical-style"><a data-toggle="tab" href="#workInfo"><font size="5" color="black">4. </font>Work Experience</a></li>
+                             
                              
                      </div>
                  </div>
@@ -713,138 +713,61 @@
                                                  <h4>EDUCATION DETAILS</h4>
                                              </div>
                                          </div>
-                                         <div class='row'>
-                                             <div class='col-lg-12'>
-                                                 <h5>COLLEGE</h5>
-                                             </div>
-                                         </div>
+
                                          <div class='row'>
                                              <div class='col-xs-12'>
-                                                 <div class='form-group col-xs-12 clearfix'>
-                                                     <label class='col-xs-12 control-label' for='collegeNameOfSchool'>Name of School</label>
+                                                 <div class='form-group col-xs-4 clearfix'>
+                                                     <label class='col-xs-12 control-label' for='schoolAttended'>School Attended</label>
                                                      <div class='col-xs-12'>
-                                                         <input class='required form-control passValue' id="collegeNameOfSchool" name="collegeNameOfSchool" type='text'>
+                                                         <input class='required form-control passValue' id="schoolAttended" name="schoolAttended" type='text'>
                                                      </div>
                                                  </div>
-                                                 <div class='form-group col-xs-6 clearfix'>
-                                                     <label class='col-xs-12 control-label passValue' for='collegeYearStarted'>Year Started</label>
+                                                 <div class='form-group col-xs-4 clearfix'>
+                                                     <label class='col-xs-12 control-label passValue' for='schoolAddress'>School Address</label>
                                                      <div class='col-xs-12'>
                                                          <div class="form-group">
-                                                             <div class="input-group date year col-lg-12" id="collegeYearStarted1" data-date="" data-date-format="yyyy" data-link-field="dob_father" data-link-format="yyyy-mm-dd">
-                                                                 <input class="form-control" size="16" type="text" value="" id="collegeYearStarted" name="collegeYearStarted" readonly>
-                                                                 <span class="input-group-addon">
-                                                                     <div class="glyphicon glyphicon-remove"></div>
-                                                                 </span>
-                                                                 <span class="input-group-addon">
-                                                                     <div class="glyphicon glyphicon-calendar"></div>
-                                                                 </span>
-                                                             </div>
+                                                             <input class="form-control" size="16" type="text" value="" id="schoolAddress" name="schoolAddress">
                                                          </div>
                                                      </div>
                                                  </div>
-                                                 <div class='form-group col-xs-6 clearfix'>
-                                                     <label class='col-xs-12 control-label passValue' for='collegeYearEnded'>Year Ended</label>
+                                                 <div class='form-group col-xs-4 clearfix'>
+                                                     <label class='col-xs-12 control-label passValue' for='gradelevel'>Grade level</label>
                                                      <div class='col-xs-12'>
                                                          <div class="form-group">
-                                                             <div class="input-group date year col-lg-12" data-date="" data-date-format="yyyy" data-link-field="dob_father" data-link-format="yyyy-mm-dd" id="collegeYearEnded1">
-                                                                 <input class="form-control" size="16" type="text" value="" id="collegeYearEnded" name="collegeYearEnded" readonly>
-                                                                 <span class="input-group-addon">
-                                                                     <div class="glyphicon glyphicon-remove"></div>
-                                                                 </span>
-                                                                 <span class="input-group-addon">
-                                                                     <div class="glyphicon glyphicon-calendar"></div>
-                                                                 </span>
-                                                             </div>
+                                                             <input class="form-control" size="16" type="text" value="" id="gradelevel" name="gradelevel">
                                                          </div>
                                                      </div>
                                                  </div>
                                              </div>
                                          </div>
+
                                          <div class='row'>
                                              <div class='col-xs-12'>
-                                                 <div class='form-group col-xs-12 clearfix'>
-                                                     <label class='col-xs-12 control-label' for='collegeEducationalAttainment'>Educational Attainment / Degree Received</label>
+
+                                                 <div class='form-group col-xs-4 clearfix'>
+                                                     <label class='col-xs-12 control-label passValue' for='topicDateStarted'>Year Started</label>
                                                      <div class='col-xs-12'>
-                                                         <select class="selectpicker col-xs-12 form-control" data-style="btn-white" name="HighestEduc" type="text">
-                                                             <option value="" disabled selected>--Select Educational Attainment--</option>
-                                                             <option value="Doctorate">Doctorate</option>
-                                                             <option value="Master's Degree">Master's Degree</option>
-                                                             <option value="Bachelor's Degree">Bachelor's Degree</option>
-                                                             <option value="Associate Degree">Associate Degree</option>
-                                                             <option value="College Undergraduate">College Undergraduate</option>
-                                                             <option value="Highschool Graduate">Highschool Graduate</option>
-                                                             <option value="Elementary Graduate">Elementary Graduate</option>
-                                                         </select>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                         <div class='row'>
-                                             <div class='col-xs-12'>
-                                                 <div class='form-group col-xs-12 clearfix'>
-                                                     <label class='col-xs-12 control-label' for='collegeAddress'>Address</label>
-                                                     <div class='col-xs-12'>
-                                                         <textarea class='required form-control passValue' id="collegeAddress" name="collegeAddress" rows='3'></textarea>
-                                                     </div>
-                                                 </div>
-                                             </div>
-                                         </div>
-                                         <div class="add_profession">
-                                             <div id="professionalClass">
-                                                 <div class='row'>
-                                                     <div class='col-lg-12'>
-                                                         <h5>PROFESSIONAL</h5>
-                                                     </div>
-                                                 </div>
-                                                 <div class='row'>
-                                                     <div class='col-xs-12'>
-                                                         <div class='form-group col-xs-4 clearfix'>
-                                                             <label class='col-xs-12 control-label' for='professionalNameOfSchool'>Name of School</label>
-                                                             <div class='col-xs-12'>
-                                                                 <input class='required form-control passValue' id="professionalNameOfSchool" name="professionalNameOfSchool[]" type='text'>
-                                                             </div>
-                                                         </div>
-                                                         <div class='form-group col-xs-4 clearfix'>
-                                                             <label class='col-xs-12 control-label passValue' for='professionalYearStarted'>Year Started</label>
-                                                             <div class='col-xs-12'>
-                                                                 <div class="form-group">
-                                                                     <select style="width: 260px; font-size: 100%;" class="form-control" name="professionalYearStarted[]" id="professionalYearStarted1"></select>
-                                                                 </div>
-                                                             </div>
-                                                         </div>
-                                                         <div class='form-group col-xs-4 clearfix'>
-                                                             <label class='col-xs-12 control-label passValue' for='professionalYearEnded'>Year Ended</label>
-                                                             <div class='col-xs-12'>
-                                                                 <select style="width: 260px; font-size: 100%;" class="form-control" name="professionalYearEnded[]" id="professionalYearEnded1"></select>
-                                                             </div>
+                                                         <div class="form-group">
+                                                             <input class="form-control" size="16" type="date" value="" id="topicDateStarted" name="topicDateStarted[]">
                                                          </div>
                                                      </div>
                                                  </div>
-                                                 <div class='row'>
+                                                 <div class='form-group col-xs-4 clearfix'>
+                                                     <label class='col-xs-12 control-label passValue' for='topicDateEnded'>Year Ended</label>
                                                      <div class='col-xs-12'>
-                                                         <div class='form-group col-xs-12 clearfix'>
-                                                             <label class='col-xs-12 control-label' for='professionalEducAttainment'>Educational Attainment / Degree Received</label>
-                                                             <div class='col-xs-12'>
-                                                                 <input class='required form-control passValue' id="professionalEducAttainment" name="professionalEducAttainment[]" type='text'>
-                                                             </div>
-                                                         </div>
-                                                     </div>
-                                                 </div>
-                                                 <div class='row'>
-                                                     <div class='col-xs-12'>
-                                                         <div class='form-group col-xs-12 clearfix'>
-                                                             <label class='col-xs-12 control-label' for='professionalAddress'>Address</label>
-                                                             <div class='col-xs-12'>
-                                                                 <textarea class='required form-control passValue' id="professionalAddress" name="professionalAddress[]" rows='3'></textarea>
-                                                             </div>
+                                                         <div class="form-group">
+                                                             <input class="form-control" size="16" type="date" value="" id="topicDateEnded" name="topicDateEnded[]">
                                                          </div>
                                                      </div>
                                                  </div>
                                              </div>
                                          </div>
+
+
+
                                          <div class="col-sm-4">
                                              <!-- <button class="btn btn-default btn-md waves-effect waves-light m-b-30 add-prof">
-                    <i class="md md-add"></i>Add Profession</a></button> -->
+                        <i class="md md-add"></i>Add Profession</a></button> -->
                                          </div>
                                          <div class="add_seminar">
                                              <div id="seminar">
@@ -889,23 +812,12 @@
                                                          </div>
                                                      </div>
                                                  </div>
-                                                 <div class="row">
-                                                     <div class="col-xs-12">
-                                                         <div class='form-group col-xs-12 clearfix'>
-                                                             <label class='col-xs-12 control-label' for='upload'>Upload Certificate</label>
-                                                             <div class='col-xs-12'>
-                                                                 <span class="btn-file">
-                                                                     <input class="required" type="file" name="uploadCert" id="uploadCert"></br>
-                                                                 </span>
-                                                             </div>
-                                                         </div>
-                                                     </div>
-                                                 </div>
+
                                              </div>
                                          </div>
                                          <div class="col-sm-4">
                                              <!--   <button class="btn btn-default btn-md waves-effect waves-light m-b-30 add-seminar">
-                      <i class="md md-add"></i> Add More</button> -->
+                        <i class="md md-add"></i> Add More</button> -->
                                          </div>
                                          <div class='form-group clearfix'>
                                              <label class='col-xs-12 control-label'>(*) Mandatory</label>
@@ -916,9 +828,90 @@
                          </div>
                          <!-- end educInfo tab -->
 
+                         <div id="workInfo" class="tab-pane fade">
+                             <div class="panel panel-custom">
+                                 <div class="panel-heading"><i class="fa fa-address-book-o"></i>Work Experience</div>
+                                 <div class="panel-body">
+                                     <div class="work_details">
+                                         <div class="workdetails" name="work">
+                                             <div class='row'>
+                                                 <div class='col-xs-12'>
+                                                     <h4 class="remove">WORK EXPERIENCE</h4>
+                                                 </div>
+                                             </div>
+                                             <div class='row'>
+                                                 <div class='col-xs-12'>
+                                                     <div class='form-group col-xs-4 clearfix'>
+                                                         <label class='col-xs-12 control-label' for='companyName'>Company Name</label>
+                                                         <div class='col-xs-12'>
+                                                             <input class='required form-control passValue' id="companyName" name="companyName" type='text'>
+                                                         </div>
+                                                     </div>
+                                                     <div class='form-group col-xs-4 clearfix'>
+                                                         <label class='col-xs-12 control-label passValue' for='YearStarted'>Year Started</label>
+                                                         <div class='col-xs-12'>
+                                                             <div class="form-group">
+                                                                 <input class="form-control" size="16" type="text" value="" id="YearStarted" name="YearStarted">
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                     <div class='form-group col-xs-4 clearfix'>
+                                                         <label class='col-xs-12 control-label passValue' for='YearEnded'>Year Ended</label>
+                                                         <div class='col-xs-12'>
+                                                             <div class="form-group">
+                                                                 <input class="form-control" size="16" type="text" value="" id="YearEnded'" name="YearEnded'">
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class='form-group col-xs-4 clearfix'>
+                                                 <label class='col-xs-12 control-label' for='OldPosition'>Former Job Position</label>
+                                                 <div class='col-xs-12'>
+                                                     <input class='required form-control passValue' name="OldPosition" id="OldPosition" type='text'>
+                                                 </div>
+                                             </div>
+                                             <div class='row'>
+                                                 <div class='col-xs-12'>
+                                                     <h4 class="remove">Reference</h4>
+                                                 </div>
+                                             </div>
+                                             <div class='row'>
+                                                 <div class='col-xs-12'>
+                                                     <div class='form-group col-xs-4 clearfix'>
+                                                         <label class='col-xs-12 control-label' for='refCompany'>Reference Company</label>
+                                                         <div class='col-xs-12'>
+                                                             <input class='required form-control passValue' id="refCompany" name="refCompany" type='text'>
+                                                         </div>
+                                                     </div>
+                                                     <div class='form-group col-xs-4 clearfix'>
+                                                         <label class='col-xs-12 control-label passValue' for='refPosition'>Reference Position</label>
+                                                         <div class='col-xs-12'>
+                                                             <div class="form-group">
+                                                                 <input class="form-control" size="16" type="text" value="" id="refPosition" name="refPosition">
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                     <div class='form-group col-xs-4 clearfix'>
+                                                         <label class='col-xs-12 control-label passValue' for='refNum'>Reference Mobile Number</label>
+                                                         <div class='col-xs-12'>
+                                                             <div class=' input-group'>
+                                                                 <span class="input-group-addon">+63</span>
+                                                                 <input class='required form-control passValue' type="number" name="empMobile" placeholder="xxxxxxxxxx" id="empMobile" type='text'>
+                                                             </div>
+                                                         </div>
+                                                     </div>
+                                                 </div>
+                                             </div>
 
 
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
 
+                        
 
 
 
