@@ -1,0 +1,13 @@
+﻿#InfoTable {
+    text-align: center
+}
+
+@media only screen and (max-width: 992px) {
+    #InfoTable {
+        text-align: left
+    }
+}
+h3 {
+    color: #1E84AB !important
+
+}
