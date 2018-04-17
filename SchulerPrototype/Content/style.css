@@ -653,3 +653,12 @@ figcaption {
 .quicktrackcolor {
     color: #21d23e !important;
 }
+.sec-new {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px
+
+}
+.bg-white{
+    background-color: #fff !important;
+}
