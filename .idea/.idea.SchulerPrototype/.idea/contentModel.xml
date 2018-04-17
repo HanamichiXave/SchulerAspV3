@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="SchulerPrototype" t="IncludeRecursive">
+        <e p="App_Data" t="Include" />
+        <e p="App_Start" t="Include">
+          <e p="BundleConfig.cs" t="Include" />
+          <e p="FilterConfig.cs" t="Include" />
+          <e p="RouteConfig.cs" t="Include" />
+        </e>
+        <e p="ApplicationInsights.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Content" t="Include">
+          <e p="bootstrap-theme.css" t="Include" />
+          <e p="bootstrap-theme.css.map" t="Include" />
+          <e p="bootstrap-theme.min.css" t="Include" />
+          <e p="bootstrap-theme.min.css.map" t="Include" />
+          <e p="bootstrap.css" t="Include" />
+          <e p="bootstrap.css.map" t="Include" />
+          <e p="bootstrap.min.css" t="Include" />
+          <e p="bootstrap.min.css.map" t="Include" />
+          <e p="css" t="Include">
+            <e p="Security" t="Include">
+              <e p="style.css" t="Include" />
+            </e>
+          </e>
+          <e p="CSSDataTables" t="Include">
+            <e p="autoFill.bootstrap.css" t="Include" />
+            <e p="autoFill.bootstrap.min.css" t="Include" />
+            <e p="autoFill.bootstrap4.css" t="Include" />
+            <e p="autoFill.bootstrap4.min.css" t="Include" />
+            <e p="autoFill.dataTables.css" t="Include" />
+            <e p="autoFill.dataTables.min.css" t="Include" />
+            <e p="autoFill.foundation.css" t="Include" />
+            <e p="autoFill.foundation.min.css" t="Include" />
+            <e p="autoFill.jqueryui.css" t="Include" />
+            <e p="autoFill.jqueryui.min.css" t="Include" />
+            <e p="autoFill.semanticui.css" t="Include" />
+            <e p="autoFill.semanticui.min.css" t="Include" />
+            <e p="buttons.bootstrap.css" t="Include" />
+            <e p="buttons.bootstrap.min.css" t="Include" />
+            <e p="buttons.bootstrap4.css" t="Include" />
+            <e p="buttons.bootstrap4.min.css" t="Include" />
+            <e p="buttons.dataTables.css" t="Include" />
+            <e p="buttons.dataTables.min.css" t="Include" />
+            <e p="buttons.foundation.css" t="Include" />
+            <e p="buttons.foundation.min.css" t="Include" />
+            <e p="buttons.jqueryui.css" t="Include" />
+            <e p="buttons.jqueryui.min.css" t="Include" />
+            <e p="buttons.semanticui.css" t="Include" />
+            <e p="buttons.semanticui.min.css" t="Include" />
+            <e p="colReorder.bootstrap.css" t="Include" />
+            <e p="colReorder.bootstrap.min.css" t="Include" />
+            <e p="colReorder.bootstrap4.css" t="Include" />
+            <e p="colReorder.bootstrap4.min.css" t="Include" />
+            <e p="colReorder.dataTables.css" t="Include" />
+            <e p="colReorder.dataTables.min.css" t="Include" />
+            <e p="colReorder.foundation.css" t="Include" />
+            <e p="colReorder.foundation.min.css" t="Include" />
+            <e p="colReorder.jqueryui.css" t="Include" />
+            <e p="colReorder.jqueryui.min.css" t="Include" />
+            <e p="colReorder.semanticui.css" t="Include" />
+            <e p="colReorder.semanticui.min.css" t="Include" />
+            <e p="common.scss" t="Include" />
+            <e p="dataTables.bootstrap.css" t="Include" />
+            <e p="dataTables.bootstrap.min.css" t="Include" />
+            <e p="dataTables.bootstrap4.css" t="Include" />
+            <e p="dataTables.bootstrap4.min.css" t="Include" />
+            <e p="dataTables.foundation.css" t="Include" />
+            <e p="dataTables.foundation.min.css" t="Include" />
+            <e p="dataTables.jqueryui.css" t="Include" />
+            <e p="dataTables.jqueryui.min.css" t="Include" />
+            <e p="dataTables.material.css" t="Include" />
+            <e p="dataTables.material.min.css" t="Include" />
+            <e p="dataTables.semanticui.css" t="Include" />
+            <e p="dataTables.semanticui.min.css" t="Include" />
+            <e p="dataTables.uikit.css" t="Include" />
+            <e p="dataTables.uikit.min.css" t="Include" />
+            <e p="fixedColumns.bootstrap.css" t="Include" />
+            <e p="fixedColumns.bootstrap.min.css" t="Include" />
+            <e p="fixedColumns.bootstrap4.css" t="Include" />
+            <e p="fixedColumns.bootstrap4.min.css" t="Include" />
+            <e p="fixedColumns.dataTables.css" t="Include" />
+            <e p="fixedColumns.dataTables.min.css" t="Include" />
+            <e p="fixedColumns.foundation.css" t="Include" />
+            <e p="fixedColumns.foundation.min.css" t="Include" />
+            <e p="fixedColumns.jqueryui.css" t="Include" />
+            <e p="fixedColumns.jqueryui.min.css" t="Include" />
+            <e p="fixedColumns.semanticui.css" t="Include" />
+            <e p="fixedColumns.semanticui.min.css" t="Include" />
+            <e p="fixedHeader.bootstrap.css" t="Include" />
+            <e p="fixedHeader.bootstrap.min.css" t="Include" />
+            <e p="fixedHeader.bootstrap4.css" t="Include" />
+            <e p="fixedHeader.bootstrap4.min.css" t="Include" />
+            <e p="fixedHeader.dataTables.css" t="Include" />
+            <e p="fixedHeader.dataTables.min.css" t="Include" />
+            <e p="fixedHeader.foundation.css" t="Include" />
+            <e p="fixedHeader.foundation.min.css" t="Include" />
+            <e p="fixedHeader.jqueryui.css" t="Include" />
+            <e p="fixedHeader.jqueryui.min.css" t="Include" />
+            <e p="fixedHeader.semanticui.css" t="Include" />
+            <e p="fixedHeader.semanticui.min.css" t="Include" />
+            <e p="jquery.dataTables.css" t="Include" />
+            <e p="jquery.dataTables.min.css" t="Include" />
+            <e p="jquery.dataTables_themeroller.css" t="Include" />
+            <e p="keyTable.bootstrap.css" t="Include" />
+            <e p="keyTable.bootstrap.min.css" t="Include" />
+            <e p="keyTable.bootstrap4.css" t="Include" />
+            <e p="keyTable.bootstrap4.min.css" t="Include" />
+            <e p="keyTable.dataTables.css" t="Include" />
+            <e p="keyTable.dataTables.min.css" t="Include" />
+            <e p="keyTable.foundation.css" t="Include" />
+            <e p="keyTable.foundation.min.css" t="Include" />
+            <e p="keyTable.jqueryui.css" t="Include" />
+            <e p="keyTable.jqueryui.min.css" t="Include" />
+            <e p="keyTable.semanticui.css" t="Include" />
+            <e p="keyTable.semanticui.min.css" t="Include" />
+            <e p="mixins.scss" t="Include" />
+            <e p="responsive.bootstrap.css" t="Include" />
+            <e p="responsive.bootstrap.min.css" t="Include" />
+            <e p="responsive.bootstrap4.css" t="Include" />
+            <e p="responsive.bootstrap4.min.css" t="Include" />
+            <e p="responsive.dataTables.css" t="Include" />
+            <e p="responsive.dataTables.min.css" t="Include" />
+            <e p="responsive.foundation.css" t="Include" />
+            <e p="responsive.foundation.min.css" t="Include" />
+            <e p="responsive.jqueryui.css" t="Include" />
+            <e p="responsive.jqueryui.min.css" t="Include" />
+            <e p="responsive.semanticui.css" t="Include" />
+            <e p="responsive.semanticui.min.css" t="Include" />
+            <e p="rowGroup.bootstrap.css" t="Include" />
+            <e p="rowGroup.bootstrap.min.css" t="Include" />
+            <e p="rowGroup.bootstrap4.css" t="Include" />
+            <e p="rowGroup.bootstrap4.min.css" t="Include" />
+            <e p="rowGroup.dataTables.css" t="Include" />
+            <e p="rowGroup.dataTables.min.css" t="Include" />
+            <e p="rowGroup.foundation.css" t="Include" />
+            <e p="rowGroup.foundation.min.css" t="Include" />
+            <e p="rowGroup.jqueryui.css" t="Include" />
+            <e p="rowGroup.jqueryui.min.css" t="Include" />
+            <e p="rowGroup.semanticui.css" t="Include" />
+            <e p="rowGroup.semanticui.min.css" t="Include" />
+            <e p="rowReorder.bootstrap.css" t="Include" />
+            <e p="rowReorder.bootstrap.min.css" t="Include" />
+            <e p="rowReorder.bootstrap4.css" t="Include" />
+            <e p="rowReorder.bootstrap4.min.css" t="Include" />
+            <e p="rowReorder.dataTables.css" t="Include" />
+            <e p="rowReorder.dataTables.min.css" t="Include" />
+            <e p="rowReorder.foundation.css" t="Include" />
+            <e p="rowReorder.foundation.min.css" t="Include" />
+            <e p="rowReorder.jqueryui.css" t="Include" />
+            <e p="rowReorder.jqueryui.min.css" t="Include" />
+            <e p="rowReorder.semanticui.css" t="Include" />
+            <e p="rowReorder.semanticui.min.css" t="Include" />
+            <e p="scroller.bootstrap.css" t="Include" />
+            <e p="scroller.bootstrap.min.css" t="Include" />
+            <e p="scroller.bootstrap4.css" t="Include" />
+            <e p="scroller.bootstrap4.min.css" t="Include" />
+            <e p="scroller.dataTables.css" t="Include" />
+            <e p="scroller.dataTables.min.css" t="Include" />
+            <e p="scroller.foundation.css" t="Include" />
+            <e p="scroller.foundation.min.css" t="Include" />
+            <e p="scroller.jqueryui.css" t="Include" />
+            <e p="scroller.jqueryui.min.css" t="Include" />
+            <e p="scroller.semanticui.css" t="Include" />
+            <e p="scroller.semanticui.min.css" t="Include" />
+            <e p="select.bootstrap.css" t="Include" />
+            <e p="select.bootstrap.min.css" t="Include" />
+            <e p="select.bootstrap4.css" t="Include" />
+            <e p="select.bootstrap4.min.css" t="Include" />
+            <e p="select.dataTables.css" t="Include" />
+            <e p="select.dataTables.min.css" t="Include" />
+            <e p="select.foundation.css" t="Include" />
+            <e p="select.foundation.min.css" t="Include" />
+            <e p="select.jqueryui.css" t="Include" />
+            <e p="select.jqueryui.min.css" t="Include" />
+            <e p="select.semanticui.css" t="Include" />
+            <e p="select.semanticui.min.css" t="Include" />
+            <e p="semanticui.scss" t="Include" />
+          </e>
+          <e p="DataTables" t="Include">
+            <e p="autoFill.bootstrap.js" t="Include" />
+            <e p="autoFill.bootstrap.min.js" t="Include" />
+            <e p="autoFill.bootstrap4.js" t="Include" />
+            <e p="autoFill.bootstrap4.min.js" t="Include" />
+            <e p="autoFill.foundation.js" t="Include" />
+            <e p="autoFill.foundation.min.js" t="Include" />
+            <e p="autoFill.jqueryui.js" t="Include" />
+            <e p="autoFill.jqueryui.min.js" t="Include" />
+            <e p="autoFill.semanticui.js" t="Include" />
+            <e p="autoFill.semanticui.min.js" t="Include" />
+            <e p="buttons.bootstrap.js" t="Include" />
+            <e p="buttons.bootstrap.min.js" t="Include" />
+            <e p="buttons.bootstrap4.js" t="Include" />
+            <e p="buttons.bootstrap4.min.js" t="Include" />
+            <e p="buttons.colVis.js" t="Include" />
+            <e p="buttons.colVis.min.js" t="Include" />
+            <e p="buttons.flash.js" t="Include" />
+            <e p="buttons.flash.min.js" t="Include" />
+            <e p="buttons.foundation.js" t="Include" />
+            <e p="buttons.foundation.min.js" t="Include" />
+            <e p="buttons.html5.js" t="Include" />
+            <e p="buttons.html5.min.js" t="Include" />
+            <e p="buttons.jqueryui.js" t="Include" />
+            <e p="buttons.jqueryui.min.js" t="Include" />
+            <e p="buttons.print.js" t="Include" />
+            <e p="buttons.print.min.js" t="Include" />
+            <e p="buttons.semanticui.js" t="Include" />
+            <e p="buttons.semanticui.min.js" t="Include" />
+            <e p="dataTables.autoFill.js" t="Include" />
+            <e p="dataTables.autoFill.min.js" t="Include" />
+            <e p="dataTables.bootstrap.js" t="Include" />
+            <e p="dataTables.bootstrap.min.js" t="Include" />
+            <e p="dataTables.bootstrap4.js" t="Include" />
+            <e p="dataTables.bootstrap4.min.js" t="Include" />
+            <e p="dataTables.buttons.js" t="Include" />
+            <e p="dataTables.buttons.min.js" t="Include" />
+            <e p="dataTables.colReorder.js" t="Include" />
+            <e p="dataTables.colReorder.min.js" t="Include" />
+            <e p="dataTables.fixedColumns.js" t="Include" />
+            <e p="dataTables.fixedColumns.min.js" t="Include" />
+            <e p="dataTables.fixedHeader.js" t="Include" />
+            <e p="dataTables.fixedHeader.min.js" t="Include" />
+            <e p="dataTables.foundation.js" t="Include" />
+            <e p="dataTables.foundation.min.js" t="Include" />
+            <e p="dataTables.jqueryui.js" t="Include" />
+            <e p="dataTables.jqueryui.min.js" t="Include" />
+            <e p="dataTables.keyTable.js" t="Include" />
+            <e p="dataTables.keyTable.min.js" t="Include" />
+            <e p="dataTables.material.js" t="Include" />
+            <e p="dataTables.material.min.js" t="Include" />
+            <e p="dataTables.responsive.js" t="Include" />
+            <e p="dataTables.responsive.min.js" t="Include" />
+            <e p="dataTables.rowGroup.js" t="Include" />
+            <e p="dataTables.rowGroup.min.js" t="Include" />
+            <e p="dataTables.rowReorder.js" t="Include" />
+            <e p="dataTables.rowReorder.min.js" t="Include" />
+            <e p="dataTables.scroller.js" t="Include" />
+            <e p="dataTables.scroller.min.js" t="Include" />
+            <e p="dataTables.select.js" t="Include" />
+            <e p="dataTables.select.min.js" t="Include" />
+            <e p="dataTables.semanticui.js" t="Include" />
+            <e p="dataTables.semanticui.min.js" t="Include" />
+            <e p="dataTables.uikit.js" t="Include" />
+            <e p="dataTables.uikit.min.js" t="Include" />
+            <e p="jquery.dataTables.js" t="Include" />
+            <e p="jquery.dataTables.min.js" t="Include" />
+            <e p="responsive.bootstrap.js" t="Include" />
+            <e p="responsive.bootstrap.min.js" t="Include" />
+            <e p="responsive.bootstrap4.js" t="Include" />
+            <e p="responsive.bootstrap4.min.js" t="Include" />
+            <e p="responsive.foundation.js" t="Include" />
+            <e p="responsive.foundation.min.js" t="Include" />
+            <e p="responsive.jqueryui.js" t="Include" />
+            <e p="responsive.jqueryui.min.js" t="Include" />
+            <e p="responsive.semanticui.js" t="Include" />
+            <e p="responsive.semanticui.min.js" t="Include" />
+          </e>
+          <e p="datepicker" t="Include">
+            <e p="bootstrap-datetimepicker.js" t="Include" />
+            <e p="datepicker.css" t="Include" />
+            <e p="default.css" t="Include" />
+            <e p="default.date.css" t="Include" />
+            <e p="legacy.js" t="Include" />
+            <e p="material-datetime-picker.css" t="Include" />
+            <e p="material-datetime-picker.js" t="Include" />
+            <e p="picker.date.js" t="Include" />
+            <e p="picker.js" t="Include" />
+          </e>
+          <e p="font-awesome.css" t="Include" />
+          <e p="font-awesome.min.css" t="Include" />
+          <e p="images" t="Include">
+            <e p="administration.png" t="Include" />
+            <e p="asset.png" t="Include" />
+            <e p="avatar.jpg" t="Include" />
+            <e p="calendar.png" t="Include" />
+            <e p="canteen.png" t="Include" />
+            <e p="clock.png" t="Include" />
+            <e p="Hr" t="Include">
+              <e p="add.png" t="Include" />
+              <e p="employeelist.png" t="Include" />
+              <e p="leave.png" t="Include" />
+              <e p="list.png" t="Include" />
+              <e p="payroll.png" t="Include" />
+            </e>
+            <e p="hr.png" t="Include" />
+            <e p="logonatinopa.png" t="Include" />
+            <e p="security.png" t="Include" />
+            <e p="teacher.png" t="Include" />
+          </e>
+          <e p="logonatin.png" t="Include" />
+          <e p="Site.css" t="Include" />
+          <e p="style.css" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="AdminController.cs" t="Include" />
+          <e p="HrController.cs" t="Include" />
+          <e p="SecurityController.cs" t="Include" />
+          <e p="superadminController.cs" t="Include" />
+          <e p="TeacherController.cs" t="Include" />
+        </e>
+        <e p="favicon.ico" t="Include" />
+        <e p="fonts" t="Include">
+          <e p="fontawesome-webfont.eot" t="Include" />
+          <e p="fontawesome-webfont.svg" t="Include" />
+          <e p="fontawesome-webfont.ttf" t="Include" />
+          <e p="fontawesome-webfont.woff" t="Include" />
+          <e p="fontawesome-webfont.woff2" t="Include" />
+          <e p="FontAwesome.otf" t="Include" />
+          <e p="glyphicons-halflings-regular.eot" t="Include" />
+          <e p="glyphicons-halflings-regular.svg" t="Include" />
+          <e p="glyphicons-halflings-regular.ttf" t="Include" />
+          <e p="glyphicons-halflings-regular.woff" t="Include" />
+          <e p="glyphicons-halflings-regular.woff2" t="Include" />
+        </e>
+        <e p="Global.asax" t="Include" />
+        <e p="Global.asax.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="GradeLevel.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Repository" t="Include">
+          <e p="GradeLevelRepository.cs" t="Include" />
+        </e>
+        <e p="SchulerPrototype.csproj" t="IncludeRecursive" />
+        <e p="Scripts" t="Include">
+          <e p="bootstrap.js" t="Include" />
+          <e p="bootstrap.min.js" t="Include" />
+          <e p="jquery-1.10.2.intellisense.js" t="Include" />
+          <e p="jquery-1.10.2.js" t="Include" />
+          <e p="jquery-1.10.2.min.js" t="Include" />
+          <e p="jquery-1.10.2.min.map" t="Include" />
+          <e p="jquery.min.js" t="Include" />
+          <e p="jquery.validate-vsdoc.js" t="Include" />
+          <e p="jquery.validate.js" t="Include" />
+          <e p="jquery.validate.min.js" t="Include" />
+          <e p="jquery.validate.unobtrusive.js" t="Include" />
+          <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+          <e p="js" t="Include">
+            <e p="Hr" t="Include">
+              <e p="addEmployee.js" t="Include" />
+            </e>
+            <e p="Security" t="Include">
+              <e p="chart.js" t="Include" />
+              <e p="dashboard.js" t="Include" />
+              <e p="logs.js" t="Include" />
+              <e p="noidhistory.js" t="Include" />
+              <e p="noidlist.js" t="Include" />
+              <e p="visitorhistory.js" t="Include" />
+            </e>
+            <e p="Teacher" t="Include">
+              <e p="classgradingmngt.js" t="Include" />
+              <e p="dashboard.js" t="Include" />
+              <e p="messagescalendar.js" t="Include" />
+              <e p="tclassattendance.js" t="Include" />
+              <e p="tclassprog.js" t="Include" />
+              <e p="tclasssched.js" t="Include" />
+              <e p="teacherlv.js" t="Include" />
+              <e p="teachermngt.js" t="Include" />
+              <e p="tlessonplan.js" t="Include" />
+              <e p="tstudentgrades.js" t="Include" />
+              <e p="tstudgradeschool.js" t="Include" />
+              <e p="tstudgradesdeped.js" t="Include" />
+              <e p="tstudprog.js" t="Include" />
+            </e>
+          </e>
+          <e p="modernizr-2.6.2.js" t="Include" />
+          <e p="respond.js" t="Include" />
+          <e p="respond.min.js" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Admin" t="Include">
+            <e p="Admission.cshtml" t="Include" />
+            <e p="EnrollList.cshtml" t="Include" />
+            <e p="enrollment-payment.html" t="Include" />
+            <e p="Enrollment.cshtml" t="Include" />
+            <e p="GradeLevel.cshtml" t="Include" />
+            <e p="GradeSection.cshtml" t="Include" />
+            <e p="Index.cshtml" t="Include" />
+            <e p="Sections.cshtml" t="Include" />
+            <e p="SectionStudents.cshtml" t="Include" />
+            <e p="StudentList.cshtml" t="Include" />
+          </e>
+          <e p="Home" t="Include">
+            <e p="About.cshtml" t="Include" />
+            <e p="Contact.cshtml" t="Include" />
+          </e>
+          <e p="Hr" t="Include">
+            <e p="addEmployee.cshtml" t="Include" />
+            <e p="addEmployeeType.cshtml" t="Include" />
+            <e p="empList.cshtml" t="Include" />
+            <e p="employeePages.cshtml" t="Include" />
+            <e p="hrAttendance.cshtml" t="Include" />
+            <e p="hrDeducType.cshtml" t="Include" />
+            <e p="hrEmployeeLeave.cshtml" t="Include" />
+            <e p="hrManagement.cshtml" t="Include" />
+            <e p="hrPayroll.cshtml" t="Include" />
+            <e p="hrResigned.cshtml" t="Include" />
+          </e>
+          <e p="Security" t="Include">
+            <e p="dashboard.cshtml" t="Include" />
+            <e p="in_out.cshtml" t="Include" />
+            <e p="InOutLog.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+          </e>
+          <e p="superadmin" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Teacher" t="Include">
+            <e p="class_attendance.cshtml" t="Include" />
+          </e>
+          <e p="Web.config" t="Include" />
+        </e>
+        <e p="Web.config" t="Include" />
+        <e p="Web.Debug.config" t="Include" />
+        <e p="Web.Release.config" t="Include" />
+      </e>
+      <e p="SchulerPrototype.sln" t="IncludeFlat" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_SchulerPrototype.-239043562.00" t="ExcludeRecursive" />
+  </component>
+</project>

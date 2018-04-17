@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Dapper;
 using SchulerPrototype.Models;
-using SchulerPrototype.Repository;
+//using SchulerPrototype.Repository;
+using System.Data;
+
 
 namespace SchulerPrototype.Controllers
 {
@@ -13,8 +16,7 @@ namespace SchulerPrototype.Controllers
     {
         public ActionResult Index()
         {
-            GradeLevelRepository GLRepo = new GradeLevelRepository();
-            return View(GLRepo.GetAllGradeLevel());
+            return View();
         }
         public ActionResult Admission()
         {
@@ -30,7 +32,14 @@ namespace SchulerPrototype.Controllers
         }
         public ActionResult GradeLevel()
         {
-            return View();
+            List<GradeLevel> grades = new List<GradeLevel>();
+            using(IDbConnection db = new System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SchulerTrack"].ConnectionString))
+           {
+                grades = db.Query<GradeLevel>("SPselectgrade", CommandType.StoredProcedure).ToList();
+            }
+
+            return View(grades);
+
         }
         public ActionResult GradeSection()
         {

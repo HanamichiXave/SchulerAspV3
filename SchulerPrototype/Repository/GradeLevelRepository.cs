@@ -18,21 +18,21 @@ namespace SchulerPrototype.Repository
             con = new SqlConnection(constr);
         }
         //To Add Employee details
-        public void AddEmployee(GradeLevel objGradeLevel)
-        {
-            //Additing the employess
-            try
-            {
-                connection();
-                con.Open();
-                con.Execute("SPinsertgrade", objGradeLevel, commandType: CommandType.StoredProcedure);
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+        //public void AddEmployee(GradeLevel objGradeLevel)
+        //{
+        //    //Additing the employess
+        //    try
+        //    {
+        //        connection();
+        //        con.Open();
+        //        con.Execute("SPinsertgrade", objGradeLevel, commandType: CommandType.StoredProcedure);
+        //        con.Close();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
         //To view employee details with generic list 
         public List<GradeLevel> GetAllGradeLevel()
         {

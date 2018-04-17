@@ -30,60 +30,6 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Sample</td>
-                <td>PHP 0.00</td>
-                <td>PHP 0.00</td>
-                <td>PHP 0.00</td>
-                <td class="text-center">
-                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Edit Details ]</button>
-                    <a class="btn btn-link" href="@Url.Action("GradeSection","Admin")">[ Section Details ]</a>
-                    <div id="st1" class="modal fade text-left" role="dialog">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header m2">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">#1</h4>
-                      </div>
-                      <div class="modal-body">
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input class="form-control" type="text" name="">
-                        </div>
-                        <div class="form-group">
-                            <label>Tuition</label>
-                            <input class="form-control" type="text" name="">
-                        </div>
-                        <div class="form-group">
-                            <label>Laboratory</label>
-                            <input class="form-control" type="text" name="">
-                        </div>
-                        <div class="form-group">
-                            <label>Miscellenious</label>
-                            <input class="form-control" type="text" name="">
-                        </div>
-                      </div>
-                      <div class="modal-footer m2">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                    </div>
-                    </div>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Sample</td>
-                <td>PHP 0.00</td>
-                <td>PHP 0.00</td>
-                <td>PHP 0.00</td>
-                <td class="text-center">
-                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Edit Details ]</button>
-                    <a class="btn btn-link" href="@Url.Action("GradeSection","Admin")">[ Section Details ]</a>
-                </td>
-              </tr>
                 @foreach (var item in Model)
                 {
                   <tr>
@@ -95,6 +41,38 @@
                     <td class="text-center">
                         <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Edit Details ]</button>
                         <a class="btn btn-link" href="@Url.Action("GradeSection","Admin")">[ Section Details ]</a>
+                        <div id="st1" class="modal fade text-left" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header m2">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">#1</h4>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input class="form-control" type="text" name="" value="@Html.DisplayFor(modelItem => item.gradelvl_name)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tuition</label>
+                                        <input class="form-control" type="text" name="" value="@Html.DisplayFor(modelItem => item.tuition)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Laboratory</label>
+                                        <input class="form-control" type="text" name="" value="@Html.DisplayFor(modelItem => item.lab)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Miscellenious</label>
+                                        <input class="form-control" type="text" name="" value="@Html.DisplayFor(modelItem => item.misc)">
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer m2">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
                     </td>
                   </tr>
                 }
