@@ -1,0 +1,113 @@
+﻿@{
+    ViewBag.Title = "SectionStudents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br><br><br>
+<ul class="breadcrumb">
+  <li><a href="@Url.Action("Index","Admin")">Home</a></li>
+  <li><a href="@Url.Action("GradeLevel","Admin")">Grade Level</a></li>
+  <li><a href="@Url.Action("GradeSection","Admin")">Grade 1</a></li>
+  <li class="active">Section 1</li> 
+</ul>
+<div class="container">
+    <h1 class="page-header enr-title">Students</h1>
+    <p class="enr-total">Total No. of Students: 25</p>
+    <div class="row frm-grp-col">
+        <h4 class="col-sm-2">Find Student: &nbsp;</h4>
+        <div class="has-feedback col-sm-10">
+            <input class="form-control" type="text" placeholder="Type here to search for students">
+            <span class="form-control-feedback pr-2"><i class="fa fa-search"></i></span>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 30vh">
+        <table class="table table-hover table-bordered bg-white">
+            <thead>
+              <tr class="bg-primary">
+                <th>Student No.</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Middlename</th>
+                <th>Grade</th>
+                <th>Section</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#18-0000001</td>
+                <td>Sample</td>
+                <td>Sample</td>
+                <td>Sample</td>
+                <td>Grade 1</td>
+                <td>Earth</td>
+                <td class="text-center">
+                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ View Details ]</button>
+                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Section Details ]</button>
+                    <div id="st1" class="modal fade text-left" role="dialog">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header m2">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">#18-0000001</h4>
+                      </div>
+                      <div class="modal-body">
+                        <p><b>Name:</b> Sample, Sample Sample</p>
+                        <p><b>Grade Level:</b> Grade 1</p>
+                        <p><b>Section:</b> Earth</p><br>
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th>Subject</th>
+                                <th>Time</th>
+                                <th>Teacher</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Math</td>
+                                <td>7:00 am - 8:00 am</td>
+                                <td>Juan Dela Cruz</td>
+                              </tr>
+                              <tr>
+                                <td>English</td>
+                                <td>8:00 am - 9:00 am</td>
+                                <td>John Doe</td>
+                              </tr>
+                        </table>
+                      </div>
+                      <div class="modal-footer m2">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td>#18-0000002</td>
+                <td>Sample</td>
+                <td>Sample</td>
+                <td>Sample</td>
+                <td>Grade 5</td>
+                <td>Genesis</td>
+                <td class="text-center">
+                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ View Details ]</button>
+                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Section Details ]</button>
+                </td>
+              </tr>
+              <tr>
+                <td>#18-0000003</td>
+                <td>Sample</td>
+                <td>Sample</td>
+                <td>Sample</td>
+                <td>Grade 2</td>
+                <td>Newton</td>
+                <td class="text-center">
+                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ View Details ]</button>
+                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Section Details ]</button>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

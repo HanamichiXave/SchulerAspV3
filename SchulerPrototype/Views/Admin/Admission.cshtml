@@ -2,250 +2,209 @@
     ViewBag.Title = "Admission";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Admission</h2>
-
+<br><br><br>
+<ul class="breadcrumb">
+  <li><a href="@Url.Action("Index","Admin")">Home</a></li>
+  <li class="active">Admission</li> 
+</ul>
 <div class="container">
-<br><br>
-<div class="page-header" style="color: #000033">
-    <h2><strong>Administration Management</strong></h2>
-</div>
-<ol class="breadcrumb" style="background-color: #D9EDF7">
-    <li><a href="admin-management.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i> <label> Home</label></a></li>
-    <li>Student Pre-Admission</li>
-</ol>
-<br>
-<div class="col-xs-12">
-        <div class="panel panel-custom">
-            <div class="panel-heading">IA. APPLICANTS INFORMATION</div>
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                        <div class="form-group">
-                            <label>Surname</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                        <div class="form-group">
-                            <label>First Name</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                        <div class="form-group">
-                            <label>Middle Name</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
-                        <div class="form-group">
-                            <label>Address: </label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                        <div class="form-group">
-                            <label>Citizenship</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-                        <div class="form-group">
-                            <label>Mobile No. (S)</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-                        <div class="form-group">
-                            <label>Email</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-                        <div class="form-group">
-                            <label class="control-label" for="dob">Date of Birth *</label>
-                            <div class="input-group date form_date" data-date-format="dd MM yyyy" data-link-field="dob" data-link-format="dd MM yyyy">
-                               <input id="dateOfBirth" class="form-control" size="16" type="text" value="" readonly="">
-                               <span class="input-group-addon">
-                                  <div id="dateOfBirthIcon" class="glyphicon glyphicon-calendar datepicker"></div>
-                               </span>
-                               <span class="input-group-addon">
-                                  <div id="dateOfBirthCloseIcon" class="glyphicon glyphicon-remove"></div>
-                               </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-                        <div class="form-group">
-                            <label>Place of Birth</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                        <div class="form-group">
-                            <label>Religion</label>
-                            <select class="form-control" id="select-religion">
-                                <option selected disabled>- SELECT RELIGION -</option>
-                                <option value="">Roman Catholic</option>
-                                <option value="1">Protestant</option>
-                                <option value="2">Others</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="protestant" style="display: none;">
-                        <div class="form-group">
-                            <label>Specify</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3" id="others" style="display: none;">
-                        <div class="form-group">
-                            <label>Specify</label>
-                            <input class="form-control" type="" name="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-custom">
-            <div class="panel-heading">IB. SCHOLASTICS BACKGROUND</div>
-            <div class="panel-body">
-                <p>List in order, beginning from the lowest grade, ALL schools attended. This must be a COMPLETE listing of evevry school in which the child has been enrolled.</p>
-                <div style="overflow-x: auto;">
-                    <table id="scholastic" class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th style="width: 30%; text-align: center;">School Attended</th>
-                                <th style="width: 35%; text-align: center;">Level</th>
-                                <th style="width: 20%; text-align: center;" colspan="3">Level</th>
-                                <th style="width: 15%; text-align: center;" colspan="3">School Year</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><input class="form-control input-sm tb-input" type="" name=""></td>
-                                <td><input class="form-control input-sm tb-input" type="" name=""></td>
-                                <td class="no-border-right">
-                                    <center>
-                                        <input class="form-control" style="width:50px;" type="" name="" placeholder="G - 1"> 
-                                    </center>
-                                </td>
-                                <td class="no-border-right">
-                                    <center>
-                                        <label> - </label>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input class="form-control" style="width:50px;" type="" name="" placeholder="G - 3">
-                                    </center>
-                                </td>
-                                <td class="no-border-right">
-                                    <center>
-                                        <input class="form-control" style="width: 60px;" type="" name="" placeholder="2013" maxlength="4">
-                                    </center>
-                                </td>
-                                <td class="no-border-right">
-                                    <center>
-                                        <label> - </label>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input class="form-control" style="width: 60px;" type="" name="" placeholder="2016" maxlength="4">
-                                    </center>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><input class="form-control input-sm" type="" name=""></td>
-                                <td><input class="form-control input-sm" type="" name=""></td>
-                                <td class="no-border-right">
-                                    <center>
-                                        <input class="form-control" style="width:50px;" type="" name="" placeholder="G - 1"> 
-                                    </center>
-                                </td>
-                                <td class="no-border-right">
-                                    <center>
-                                        <label> - </label>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input class="form-control" style="width:50px;" type="" name="" placeholder="G - 3">
-                                    </center>
-                                </td>
-                                <td class="no-border-right">
-                                    <center>
-                                        <input class="form-control" style="width: 60px;" type="" name="" placeholder="2013" maxlength="4">
-                                    </center>
-                                </td>
-                                <td class="no-border-right">
-                                    <center>
-                                        <label> - </label>
-                                    </center>
-                                </td>
-                                <td>
-                                    <center>
-                                        <input class="form-control" style="width: 60px;" type="" name="" placeholder="2016" maxlength="4">
-                                    </center>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button class="btn btn-primary" id="btnAddRow" name="">Add more</button>
-                    <button class="btn btn-success" id="btndeleteRow" name="">Delete Row</button>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-custom">
-            <div class="panel-heading">II. GUARDIAN' INFORMATION</div>
-            <div class="panel-body">
-                <div id="guardian-info" class="tab-pane fade in active">
-                    <br>
+    <h1 class="page-header enr-title">Admission</h1><br><br>
+    <form>
+        <div class="row">
+            <div class="panel panel-custom">
+                <div class="panel-heading">IA. APPLICANTS INFORMATION</div>
+                <div class="panel-body">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>Surname</label>
-                                        <input class="form-control" type="" name="">
-                                    </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>Surname *</label>
+                                <input class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>First Name *</label>
+                                <input class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>Middle Name</label>
+                                <input class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9">
+                            <div class="form-group">
+                                <label>Address *</label>
+                                <input class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>Citizenship *</label>
+                                <input class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+                            <div class="form-group">
+                                <label>Mobile No.</label>
+                                <input class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+                            <div class="form-group">
+                                <label class="control-label" for="dob">Date of Birth *</label>
+                                <div class="input-group">
+                                   <input id="dateOfBirth" class="form-control" size="16" type="date" value="">
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>First Name</label>
-                                        <input class="form-control" type="" name="">
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+                            <div class="form-group">
+                                <label>Place of Birth *</label>
+                                <input class="form-control" type="text" name="">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                            <div class="form-group">
+                                <label>Religion</label>
+                                <input class="form-control" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-custom">
+                <div class="panel-heading">IB. SCHOLASTICS BACKGROUND</div>
+                <div class="panel-body">
+                    <p>List in order, beginning from the lowest grade, ALL schools attended. This must be a COMPLETE listing of evevry school in which the child has been enrolled.</p>
+                    <div style="overflow-x: auto;">
+                        <table id="scholastic" class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th style="width: 30%; text-align: center;">School Attended</th>
+                                    <th style="width: 35%; text-align: center;">Level</th>
+                                    <th style="width: 20%; text-align: center;" colspan="3">Level</th>
+                                    <th style="width: 15%; text-align: center;" colspan="3">School Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input class="form-control input-sm tb-input" type="text" name="" placeholder="Type school name here.."></td>
+                                    <td><input class="form-control input-sm tb-input" type="text" name="" placeholder="Type school type here.."></td>
+                                    <td class="no-border-right">
+                                        <center>
+                                            <input class="form-control" style="width:80px;" type="text" name="" placeholder="G - 1" maxlength="5"> 
+                                        </center>
+                                    </td>
+                                    <td class="no-border-right">
+                                        <center>
+                                            <label> - </label>
+                                        </center>
+                                    </td>
+                                    <td>
+                                        <center>
+                                            <input class="form-control" style="width:80px;" type="text" name="" placeholder="G - 2" maxlength="5">
+                                        </center>
+                                    </td>
+                                    <td class="no-border-right">
+                                        <center>
+                                            <input class="form-control" style="width: 60px;" type="text" name="" placeholder="2013" maxlength="4">
+                                        </center>
+                                    </td>
+                                    <td class="no-border-right">
+                                        <center>
+                                            <label> - </label>
+                                        </center>
+                                    </td>
+                                    <td>
+                                        <center>
+                                            <input class="form-control" style="width: 60px;" type="text" name="" placeholder="2016" maxlength="4">
+                                        </center>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="btn btn-primary" id="btnAddRow" name="">Add more</button>
+                        <button class="btn btn-success disabled" id="btndeleteRow" name="">Delete Row</button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-custom">
+                <div class="panel-heading">II. GUARDIAN INFORMATION</div>
+                <div class="panel-body">
+                    <div id="guardian-info" class="tab-pane fade in active">
+                        <br>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Guardian Name *</label>
+                                    <input id="gr-search" class="form-control" type="text" />
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>Middle Name</label>
-                                        <input class="form-control" type="" name="">
-                                    </div>
+                            </div>
+                            <div class="col-md-4"><br />
+                            </div>
+                        </div>
+                        <div id="gr-note" class="row">
+                            <div class="col-md-12">
+                                <div class="jumbotron">
+                                    <h3>Note:</h3>
+                                    <h4>Type Guardian name above to search for info</h4><br />
+                                    <i>Not yet registered?</i>
+                                    <button type="button" class="btn-link" data-toggle="modal" data-target="#add-guardian-modal">click here</button>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <div class="form-group">
-                                        <label>Address</label>
-                                        <input class="form-control" type="" name="">
+                            </div>
+                        </div>
+                        <div id="gr-info" class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label>Surname</label>
+                                            <input class="form-control" type="text" name="" disabled="true">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>Mobile No.</label>
-                                        <input class="form-control" type="" name="">
+                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label>First Name</label>
+                                            <input class="form-control" type="text" name="" disabled="true">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input class="form-control" type="" name="">
+                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label>Middle Name</label>
+                                            <input class="form-control" type="text" name="" disabled="true">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                    <div class="form-group">
-                                        <label>Occupation/Profession</label>
-                                        <input class="form-control" type="" name="">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <div class="form-group">
+                                            <label>Address</label>
+                                            <input class="form-control" type="text" name="" disabled="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label>Mobile No.</label>
+                                            <input class="form-control" type="text" name="" disabled="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input class="form-control" type="text" name="" disabled="true">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                        <div class="form-group">
+                                            <label>Occupation/Profession</label>
+                                            <input class="form-control" type="text" name="" disabled="true">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -253,6 +212,122 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <h6>Note: By clicking this button, the student will be added to the list of students and will permitted to enrol. Your name will be log after as a reference to this action.</h6>
+            <input class="btn btn-success btn-lg pull-right" type="submit" name="" value="Save Student Information">
+        </div><br>
+    </form>
+</div>
+<div class="modal fade" role="dialog" id="add-guardian-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header m2">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add Guardian</h4>
+                </div>
+                <div class="modal-body m2">
+                    <div class="row gr-new-info">
+                        <div class="col-sm-4">
+                            <label>Lastname</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Firstname</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Middlename</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </div>
+                    <div class="row gr-new-info"><br />
+                        <div class="col-xs-12">
+                            <label>Address</label>
+                            <input class="form-control" type="text"/>
+                        </div>
+                    </div>
+                    <div class="row gr-new-info"><br />
+                        <div class="col-sm-4">
+                            <label>Mobile No.</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Email</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-sm-4">
+                            <label>Occupation</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                    </div>
+                    <div class="row" id="gr-acc">
+                        <div class="col-xs-12">
+                            <label>Username</label>
+                            <input class="form-control" type="text" />
+                        </div>
+                        <div class="col-xs-12"><br />
+                            <label>Password</label>
+                            <input class="form-control" type="password" />
+                        </div>
+                        <div class="col-xs-12"><br />
+                            <label>Confirm Password</label>
+                            <input class="form-control" type="password" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer m2">
+                    <div class="btn-group">
+                        <div class="btn btn-primary disabled" id="gr-mod-prev">Previous</div>
+                        <div class="btn btn-primary" id="gMod-proc"> &nbsp; &nbsp; Next &nbsp; &nbsp; </div>
+                        <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('#gr-info').hide();
+        $('#gr-search').keyup(function () {
+            var searchValue = $('#gr-search').val();
+            if (searchValue.length > 1) {
+                $('#gr-note').slideUp("slow");
+                $('#gr-info').show();
+            }
+            else {
+                $('#gr-info').hide();
+                $('#gr-note').show();
+            }
+        });
+        $('#gr-acc').hide();
+        $('#gMod-proc').click(function () {
+            $('#gr-acc').show();
+            $('.gr-new-info').hide();
+            $('#gr-mod-prev').removeClass("disabled");
+            $('#gMod-proc').text(' &nbsp; &nbsp; Save &nbsp; &nbsp; ');
+        });
+        $("#gr-mod-prev").click(function () {
+            $('#gr-acc').hide();
+            $('.gr-new-info').show();
+            $('#gr-mod-prev').addClass("disabled");
+            $('#gMod-proc').text(' &nbsp; &nbsp; Next &nbsp; &nbsp; ');
+        })
+       $('#btnAddRow').click(function(){
+            $('#scholastic tbody').append('<tr> <td><input class="form-control input-sm tb-input" type="text" name="" placeholder="Type school name here.."></td> <td><input class="form-control input-sm tb-input" type="text" name="" placeholder="Type school type here.."></td> <td class="no-border-right"> <center> <input class="form-control" style="width:80px;" type="text" name="" placeholder="G - 1" maxlength="5"> </center> </td> <td class="no-border-right"> <center> <label> - </label> </center> </td> <td> <center> <input class="form-control" style="width:80px;" type="text" name="" placeholder="G - 2" maxlength="5"> </center> </td> <td class="no-border-right"> <center> <input class="form-control" style="width: 60px;" type="text" name="" placeholder="2013" maxlength="4"> </center> </td> <td class="no-border-right"> <center> <label> - </label> </center> </td> <td> <center> <input class="form-control" style="width: 60px;" type="text" name="" placeholder="2016" maxlength="4"> </center> </td> </tr>');
+            $('#btndeleteRow').removeClass('disabled');
+        });
+       $('#btndeleteRow').click(function(){
+            var schRw = $('#scholastic tbody tr').length;
+            if (!(schRw == 1)){
+                $('#scholastic tbody tr:last-child').remove();
+                if ($('#scholastic tbody tr').length == 1) {
+                    $('#btndeleteRow').addClass("disabled");
+                }
+            }
+       });
+    });
+</script>

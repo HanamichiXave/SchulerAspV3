@@ -1,13 +1,31 @@
 ﻿<Properties StartupConfiguration="{45EDD58B-2FD6-4A69-8EF7-0B16452F406F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SchulerPrototype/Views/Hr/empList.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../Users/User4/Documents/intern Lowell/ApplicationHost.cs">
     <Files>
-      <File FileName="SchulerPrototype/Views/Hr/empList.cshtml" Line="395" Column="104" />
+      <File FileName="SchulerPrototype/Content/style.css" Line="1" Column="72" />
+      <File FileName="SchulerPrototype/Controllers/AdminController.cs" Line="6" Column="14" />
+      <File FileName="SchulerPrototype/Repository/GradeLevelRepository.cs" Line="25" Column="14" />
+      <File FileName="SchulerPrototype/Web.config" Line="68" Column="17" />
+      <File FileName="../../../../../Users/User4/Documents/intern Lowell/ApplicationHost.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SchulerPrototype" expanded="True">
+            <Node name="SchulerPrototype" expanded="True">
+              <Node name="Web.config" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <Debugger.DebugSourceFolders>
+    <String>/Users/User4/Documents/intern Lowell</String>
+  </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.SchulerPrototype PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />

@@ -110,6 +110,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -150,6 +153,8 @@
     <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Controllers\HrController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Repository\GradeLevelRepository.cs" />
+    <Compile Include="Models\GradeLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -491,14 +496,21 @@
     <Content Include="Content\datepicker\material-datetime-picker.js" />
     <Content Include="Content\datepicker\picker.date.js" />
     <Content Include="Content\datepicker\picker.js" />
-    <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\Admission.cshtml" />
-    <Content Include="Views\Admin\Enrollment.cshtml" />
     <Content Include="Views\Hr\hrResigned.cshtml" />
     <Content Include="Views\Hr\addEmployeeType.cshtml" />
     <Content Include="Views\Hr\hrEmployeeLeave.cshtml" />
     <Content Include="Views\Hr\hrDeducType.cshtml" />
     <Content Include="Views\Hr\employeePages.cshtml" />
+    <Content Include="Views\Admin\Admission.cshtml" />
+    <Content Include="Views\Admin\EnrollList.cshtml" />
+    <Content Include="Views\Admin\Enrollment.cshtml" />
+    <Content Include="Views\Admin\GradeLevel.cshtml" />
+    <Content Include="Views\Admin\GradeSection.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\SectionStudents.cshtml" />
+    <Content Include="Views\Admin\Sections.cshtml" />
+    <Content Include="Views\Admin\StudentList.cshtml" />
+    <Content Include="Views\Admin\enrollment-payment.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,104 @@
+﻿@model IEnumerable<SchulerPrototype.Models.GradeLevel>
+@{
+    ViewBag.Title = "GradeLevel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br><br><br>
+<ul class="breadcrumb">
+  <li><a href="@Url.Action("Index","Admin")">Home</a></li>
+  <li class="active">Grade Level</li> 
+</ul>
+<div class="container">
+    <h1 class="page-header">Grade Levels</h1>
+    <div class="row m-b-md">
+        <h4 class="col-sm-2">Find Student: &nbsp;</h4>
+        <div class="has-feedback col-sm-10">
+            <input class="form-control" type="text" placeholder="Type here to search for students">
+            <span class="form-control-feedback pr-2"><i class="fa fa-search"></i></span>
+        </div>
+    </div>
+    <div class="row" style="margin-bottom: 30vh">
+        <table class="table table-hover table-bordered bg-white">
+            <thead>
+              <tr class="bg-primary">
+                <th>No.</th>
+                <th style="width: 40%">@Html.DisplayNameFor(model => model.gradelvl_name)</th>
+                <th>@Html.DisplayNameFor(model => model.tuition)</th>
+                <td>@Html.DisplayNameFor(model => model.lab)</td>
+                <td>@Html.DisplayNameFor(model => model.misc)</td>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Sample</td>
+                <td>PHP 0.00</td>
+                <td>PHP 0.00</td>
+                <td>PHP 0.00</td>
+                <td class="text-center">
+                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Edit Details ]</button>
+                    <a class="btn btn-link" href="@Url.Action("GradeSection","Admin")">[ Section Details ]</a>
+                    <div id="st1" class="modal fade text-left" role="dialog">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header m2">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">#1</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label>Tuition</label>
+                            <input class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label>Laboratory</label>
+                            <input class="form-control" type="text" name="">
+                        </div>
+                        <div class="form-group">
+                            <label>Miscellenious</label>
+                            <input class="form-control" type="text" name="">
+                        </div>
+                      </div>
+                      <div class="modal-footer m2">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                    </div>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Sample</td>
+                <td>PHP 0.00</td>
+                <td>PHP 0.00</td>
+                <td>PHP 0.00</td>
+                <td class="text-center">
+                    <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Edit Details ]</button>
+                    <a class="btn btn-link" href="@Url.Action("GradeSection","Admin")">[ Section Details ]</a>
+                </td>
+              </tr>
+                @foreach (var item in Model)
+                {
+                  <tr>
+                    <td>3</td>
+                    <td>@Html.DisplayFor(modelItem => item.gradelvl_name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.tuition)</td>
+                    <td>@Html.DisplayFor(modelItem => item.lab)</td>
+                    <td>@Html.DisplayFor(modelItem => item.misc)</td>
+                    <td class="text-center">
+                        <button class="btn btn-link" data-toggle="modal" data-target="#st1">[ Edit Details ]</button>
+                        <a class="btn btn-link" href="@Url.Action("GradeSection","Admin")">[ Section Details ]</a>
+                    </td>
+                  </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
