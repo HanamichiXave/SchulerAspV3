@@ -250,3 +250,5 @@ C:/Users/arvee/Desktop/schulerasp/SchulerAspV3/SchulerPrototype/obj/Debug/Schule
 /Applications/XAMPP/xamppfiles/htdocs/SchulerAspV3/SchulerPrototype/obj/Debug/SchulerPrototype.pdb
 /Applications/XAMPP/xamppfiles/htdocs/SchulerAspV3/SchulerPrototype/bin/Dapper.dll
 /Applications/XAMPP/xamppfiles/htdocs/SchulerAspV3/SchulerPrototype/bin/Dapper.xml
+/Users/SIMPLEVIA/Documents/project/SchulerAspV3/SchulerPrototype/bin/Dapper.dll
+/Users/SIMPLEVIA/Documents/project/SchulerAspV3/SchulerPrototype/bin/Dapper.xml
