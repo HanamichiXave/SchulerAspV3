@@ -1,10 +1,12 @@
 ﻿<Properties StartupConfiguration="{45EDD58B-2FD6-4A69-8EF7-0B16452F406F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SchulerPrototype/Views/Hr/hrEmployeeLeave.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SchulerPrototype/Views/Teacher/class_attendance.cshtml">
     <Files>
-      <File FileName="SchulerPrototype/Views/Hr/empList.cshtml" Line="457" Column="45" />
-      <File FileName="SchulerPrototype/Content/css/Hr/hr.css" Line="11" Column="19" />
+      <File FileName="SchulerPrototype/Views/Hr/empList.cshtml" Line="30" Column="31" />
+      <File FileName="SchulerPrototype/Content/css/Hr/hr.css" Line="1" Column="13" />
       <File FileName="SchulerPrototype/Views/Shared/_Layout.cshtml" Line="18" Column="64" />
-      <File FileName="SchulerPrototype/Views/Hr/hrEmployeeLeave.cshtml" Line="1" Column="1" />
+      <File FileName="SchulerPrototype/Views/Hr/hrEmployeeLeave.cshtml" Line="69" Column="145" />
+      <File FileName="SchulerPrototype/Views/superadmin/Index.cshtml" Line="82" Column="71" />
+      <File FileName="SchulerPrototype/Views/Teacher/class_attendance.cshtml" Line="296" Column="88" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
