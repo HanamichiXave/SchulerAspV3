@@ -47,7 +47,13 @@ namespace SchulerPrototype.Controllers
         }
         public ActionResult EnrollList()
         {
-            return View();
+            List<StudentInfo> stud = new List<StudentInfo>();
+            using (IDbConnection db = new System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SchulerTrack"].ConnectionString))
+            {
+               stud = db.Query<StudentInfo>("SPsallstudent", CommandType.StoredProcedure).ToList();
+            }
+
+            return View(stud);
         }
         public ActionResult GradeLevel()
         {
