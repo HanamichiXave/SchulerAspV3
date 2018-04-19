@@ -31,14 +31,16 @@ namespace SchulerPrototype.Controllers
                 using (IDbConnection db = new System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SchulerTrack"].ConnectionString))
                 {
                     var result = db.Query<int>("dbo.SPaddstudentinfo @stud_givenname,@stud_middlename,@stud_lastname, @stud_address,@stud_email,@stud_mobilenum,@stud_birthday,@stud_place,@stud_religion,@stud_citizenship", new StudentInfo { stud_givenname = _studinfo.stud_givenname, stud_middlename = _studinfo.stud_middlename, stud_lastname = _studinfo.stud_lastname,   stud_address = _studinfo.stud_address, stud_email = _studinfo.stud_email, stud_mobilenum = _studinfo.stud_mobilenum, stud_birthday = _studinfo.stud_birthday, stud_place = _studinfo.stud_place, stud_religion = _studinfo.stud_religion, stud_citizenship = _studinfo.stud_citizenship });
+                    
                 }
+              
             }
             catch
             {
                 return View();
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("EnrollList");
         }
 
         public ActionResult Enrollment()
@@ -50,7 +52,7 @@ namespace SchulerPrototype.Controllers
             List<StudentInfo> stud = new List<StudentInfo>();
             using (IDbConnection db = new System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SchulerTrack"].ConnectionString))
             {
-               stud = db.Query<StudentInfo>("SPsallstudent", CommandType.StoredProcedure).ToList();
+               stud = db.Query<StudentInfo>("SPallstudent", CommandType.StoredProcedure).ToList();
             }
 
             return View(stud);
@@ -80,7 +82,14 @@ namespace SchulerPrototype.Controllers
         }
         public ActionResult StudentList()
         {
-            return View();
+            List<StudentInfo> stud = new List<StudentInfo>();
+            using (IDbConnection db = new System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["SchulerTrack"].ConnectionString))
+            {
+                stud = db.Query<StudentInfo>("SPallstudent", CommandType.StoredProcedure).ToList();
+            }
+
+            return View(stud);
+           
         }
 
         public ActionResult Details(int id)

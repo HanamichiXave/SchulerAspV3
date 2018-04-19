@@ -253,4 +253,3 @@ C:\Users\xijey\Documents\SchulerAspV3\SchulerPrototype\obj\Debug\SchulerPrototyp
 C:\Users\xijey\Documents\SchulerAspV3\SchulerPrototype\obj\Debug\SchulerPrototype.csproj.CopyComplete
 C:\Users\xijey\Documents\SchulerAspV3\SchulerPrototype\obj\Debug\SchulerPrototype.dll
 C:\Users\xijey\Documents\SchulerAspV3\SchulerPrototype\obj\Debug\SchulerPrototype.pdb
-C:\Users\xijey\Documents\SchulerAspV3\SchulerPrototype\obj\Debug\SchulerPrototype.csprojResolveAssemblyReference.cache

@@ -19,4 +19,6 @@ namespace SchulerPrototype.Models
         public string stud_religion { get; set; }
         public string stud_citizenship { get; set; }
     }
+
+
 }
